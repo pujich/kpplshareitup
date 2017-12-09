@@ -35,6 +35,59 @@ class Admin_Barang extends CI_Controller{
     	redirect('admin_barang');
 	}
 
-
+	
+	public function edit($ID){
+		$where = array('id_barang' => $ID);
+		$data['barang'] = $this->Model_kelolaBarang->edit_data($where,'barang')->result();
+		$this->load->view('view_edit', $data);
+	}
+	
+	function update(){
+		
+		
+		$id = $this->input->post('id_barang');
+		$nama_barang = $this->input->post('nama_barang');
+		$jenis = $this->input->post('jenis');
+		$deskripsi_barang = $this->input->post('deskripsi_barang');
+	 
+		$data = array(
+			'nama_barang' => $nama_barang,
+			'jenis' => $jenis,
+			'deskripsi_barang' => $deskripsi_barang,
+			'foto_barang' => $foto_barang
+		);
+		
+		if ($this->upload('foto_barang')) {
+				$data['foto_barang'] = base_url().'assets/img/'.$this->upload('file');
+			}
+		else{
+				$data['foto_barang'] = '';
+		}
+			
+		$where = array(
+			'id_barang' => $id
+		);
+	 
+		$this->Model_kelolaBarang->update_data($where,$data,'barang');
+		redirect('Admin_Barang');
+	}
+	
+	public function upload($foto_barang){
+		$config = array(
+				'upload_path'=> './assets/img/',
+				'allowed_types'=>'gif|jpg|png|jpeg',
+				'max_size'=>2048,
+				'max_width'=>500,
+				'max_height'=>500,
+				'overwrite'=>true,
+				'file_name'=>'GALERI_'.rand(0,10000000));
+		$this->upload->initialize($config);
+		$do = $this->upload->do_upload($foto_barang);
+		if (!$do) {
+			return false;
+		}else{
+			return $this->upload->data('foto_barang');
+		}
+	}
 
 } ?>

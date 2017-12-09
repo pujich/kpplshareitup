@@ -154,42 +154,35 @@
           <i class="fa fa-database"></i> Data Barang</div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              	<thead>
-                    <th style="text-align: center;">ID Barang</th>
-                    <th style="text-align: center;">Nama Barang</th>  
-                    <th style="text-align: center;">Jenis Barang</th>
-                    <th style="text-align: center;">Foto Barang</th>
-                    <th style="text-align: center;">Deskripsi Barang</th>
-                    <th style="text-align: center;">Dipinjam</th>
-                    <th style="text-align: center;">Dikembalikan</th>
-                    <th style="text-align: center;">ID Pemilik</th>
-                    <th style="text-align: center;"> </th>
-                </thead>
-                    
-                <tbody style="text-align: center;">
-                    <?php foreach ($data as $x) { ?>
-                    <tr>
-                        
-                    <td><?php echo $x['id_barang']; ?></td>
-                    <td><?php echo $x['nama_barang']; ?></td>
-                    <td><?php echo $x['jenis']; ?></td>
-                    <td><?php echo $x['foto_barang']; ?></td>
-                    <td><?php echo $x['deskripsi_barang']; ?></td>
-                    <td><?php if ($x['dipinjam']==0) {echo 'Tidak';} else {echo 'Ya';} ?></td>
-                    <td><?php if ($x['dikembalikan']==0) {echo 'Tidak';} else {echo 'Ya';} ?></td>
-                    <td><?php echo $x['id_pemilik']; ?></td>
-                    <td align="center">
-                            <a href="<?php echo base_url()."Admin_Barang/deleteBarang/".$x['id_barang']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
-                    </td>
-					<td align="center">
-                            <a href="<?php echo base_url()."Admin_Barang/edit/".$x['id_barang']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Update</button></a>
-                    </td>
-
-                        
-                    </tr>
-                    <?php } ?>
-                </tbody>
+               	<?php foreach($barang as $u){ ?>
+				<form action="<?php echo base_url(). 'Admin_Barang/update'; ?>" method="post">
+					<table style="margin:20px auto;">
+						<tr>
+							<td>Nama Barang</td>
+							<td>
+								<input type="hidden" name="id_barang" value="<?php echo $u->id_barang ?>">
+								<input type="text" name="nama_barang" value="<?php echo $u->nama_barang ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>Jenis Barang</td>
+							<td><input type="text" name="jenis" value="<?php echo $u->jenis ?>"></td>
+						</tr>
+						<tr>
+							<td><input type="file" name="foto_barang" value="<?php echo $u->foto_barang?>"></td>
+							<td><label>Upload gambar</label><br></td>
+						</tr>
+						<tr>
+							<td>Deskripsi Barang</td>
+							<td><input type="text" name="deskripsi_barang" value="<?php echo $u->deskripsi_barang ?>"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" value="Simpan"></td>
+						</tr>
+					</table>
+				</form>	
+				<?php } ?>
             </table>
           </div>
         </div>
