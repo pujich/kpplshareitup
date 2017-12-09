@@ -133,8 +133,8 @@
 													<div class="product-box">
 														<span class="sale_tag"></span>
 														<p><a href="product_detail.html"><img src="<?php echo base_url($x['foto_barang']); ?>" alt="" /></a></p>
-														<a href="product_detail.html" class="title"><?php echo $x['nama_barang'] ?></a><br/>
-														<a href="products.html" class="category"><?php echo $x['jenis'] ?></a>
+														<a href="product_detail.html"><h5><?php echo $x['nama_barang'] ?></h5></a><br/>
+														<a href="products.html"><p><?php echo $x['jenis'] ?><p></a>
 														<!-- <p class="price">$17.25</p> -->
 													</div>
 												</li>
