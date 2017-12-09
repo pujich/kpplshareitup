@@ -146,7 +146,6 @@
 								<div class="form-group">
 		  							<label for="fotoprofil">Foto Profil</label>
 		  							<input style="width: 515px;" type="file" class="form-control" name="image" value="<?php echo ($x['foto_profil']); ?>">
-
 								</div>
 
 							</div>

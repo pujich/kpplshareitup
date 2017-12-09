@@ -38,6 +38,11 @@ class Model_kelolaBarang extends CI_Model {
 	function edit_data($where,$table){		
 		return $this->db->get_where($table,$where);
 	}
+
+  public function UpdateData($tableName,$data,$where){
+      $res = $this->db->update($tableName,$data,$where);
+      return $res;
+    }
 	
 	function update_data($where,$data,$table){
 		$this->db->where($where);
