@@ -182,6 +182,9 @@
                     <td align="center">
                             <a href="<?php echo base_url()."Admin_Barang/deleteBarang/".$x['id_barang']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
                     </td>
+					<td align="center">
+                            <a href="<?php echo base_url()."Admin_Barang/edit/".$x['id_barang']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Update</button></a>
+                    </td>
 
                         
                     </tr>
