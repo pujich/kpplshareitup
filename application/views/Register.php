@@ -87,7 +87,7 @@
 				<div class="row">
 					<div class="span6">				
 						<h4 class="title" style="margin-left:0px;"><span class="text"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegister</strong> Yourself</span></h4>
-						<form action="#" method="post">
+						<!-- <form action="#" method="post"> -->
 							<input type="hidden" name="next" value="/">
 							<fieldset>
 								<div class="control-group">
@@ -120,7 +120,7 @@
 								<div class="control-group">
 									<label for="" class="control-label" style="margin-left:27px;">Foto Profil</label>
 									<div class="controls">
-										<input type="file" name="image1" style="margin-left:27px;">
+										<input type="file" name="image" style="margin-left:27px;">
 									</div>
 								</div>
 
@@ -165,7 +165,7 @@
 								<div class="control-group">
 									<label for="" class="control-label" style="margin-left:20px;">Foto KTP</label>
 									<div class="controls">
-										<input type="file" name="image2" style="margin-left:20px;">
+										<input type="file" name="foto_ktp" style="margin-left:20px;">
 									</div>
 								</div>
 							

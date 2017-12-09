@@ -10,8 +10,14 @@ class Model_kelolaProfil extends CI_Model {
 
 	function edit_profil($where,$table){		
 		return $this->db->get_where($table,$where);
-	}
+ 		}
 
+
+	public function tambahProfil($data){
+      $this->db->insert('user',$data);
+    }
+
+	
 
 }
 	?>
