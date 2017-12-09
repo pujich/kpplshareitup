@@ -63,7 +63,7 @@
 									<li><a href="./products.html">Eget molestie</a></li>
 									<li><a href="./products.html">Varius purus</a></li>									
 								</ul> -->								
-							<li><a href="">Barang</a>
+							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
 								<!-- <ul>									
 									<li><a href="./products.html">Gifts and Tech</a></li>
 									<li><a href="./products.html">Ties and Hats</a></li>
