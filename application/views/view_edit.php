@@ -116,15 +116,31 @@
             </tr>
             <tr>
               <td><b> Deskripsi Barang </b></td>
-              <td><textarea style="margin-top: 15px; margin-right: -306px; width: 515px;" type="text" class="form-control" id="nama" name="deskripsi_barang" required=""><?php echo $u->deskripsi_barang ?></textarea></td>
+              <td><textarea style="margin-top: 15px; margin-right: -309px; height: 100px; width: 515px;" type="text" class="form-control" id="nama" name="deskripsi_barang" required=""><?php echo $u->deskripsi_barang ?></textarea></td>
             </tr>
+            <tr>
+              <td><br><b> Dipinjam </b></td>
+              <td><select style="margin-left: -1px; margin-top: 25px" class="form-control" name="dipinjam">
+                    <option <?php if( $u->dipinjam=='1'){echo "selected"; } ?> value="1">Ya</option>
+                    <option <?php if( $u->dipinjam=='0'){echo "selected"; } ?> value="0">Tidak</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <td><br><b> Dikembalikan </b></td>
+              <td><select style="margin-left: -1px; margin-top: 25px" class="form-control" name="dikembalikan">
+                    <option <?php if( $u->dikembalikan=='1'){echo "selected"; } ?> value="1">Ya</option>
+                    <option <?php if( $u->dikembalikan=='0'){echo "selected"; } ?> value="0">Tidak</option>
+                  </select>
+            </tr>
+            <tr>
             <tr>
               <td><br><b> Upload gambar </b></td>
-              <td><input style="margin-top: 30px; margin-left: 22px" type="file" class="form-control" name="image" value="<?php echo $u->foto_barang?>"></td>
+              <td><input style="margin-top: 30px; margin-left: 21px" type="file" class="form-control" name="image" value="<?php echo $u->foto_barang?>"></td>
             </tr>
-            <tr>
+            
               <td></td>
-              <td><input style="margin-top: 50px" type="submit" value="Simpan"></td>
+              <td><input style="width:225px;height:50px;margin-top: 50px" type="submit" value="Simpan"></td>
             </tr>
           </table>
         </form> 
