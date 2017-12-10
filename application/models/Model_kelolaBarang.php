@@ -29,6 +29,14 @@ class Model_kelolaBarang extends CI_Model {
   		return $data->result_array();
   	}
 
+  	
+  	public function getDetailBarang($item){
+  		// $this->db->where_in('id_barang', $item);
+  		$data=$this->db->query('select * from barang where id_barang='.$item);
+
+  		return $data->result_array();
+  	}
+
   	public function postBarang($data){
   		$res = $this->db->insert('barang',$data);
 		return $res;
