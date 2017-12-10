@@ -28,9 +28,12 @@ class Home extends CI_Controller{
 		// }else{
 		// 	redirect('login');}
 	}
-
-
-
-
-
+	
+	public function cari(){
+		$where = array('nama_barang' => $this->input->post('pencari'), 'jenis' => $this->input->post('pencari'));
+		$hasil = $this->Model_kelolaBarang->pencarian($where, 'barang');
+		$data = array('data'=>$hasil);
+		$this->load->view('pencarian', $data);	
+	}
+	
 } ?>
