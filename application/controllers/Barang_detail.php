@@ -28,7 +28,8 @@ public function pinjam_barang(){
              	 'tgl_dikembalikan'  => $date);
                  
 	$this->Model_kelolaBarang->pinjamBarang($data);
-	               
+
+	               echo "<script>alert('Barang berhasil dipinjam') ; window.location.href = '../'</script>";
                // 'foto_profil' => $file1
                // 'foto_ktp' => $file2
         	  

@@ -20,7 +20,7 @@ class Home extends CI_Controller{
 	public function index(){
 		//$data['results'] = $this->Model_futsal->login_user($username,$pass);
         //$this->load->helper(array('form','url'));
-        $data = $this->Model_kelolaBarang->tampilDetail();
+        $data = $this->Model_kelolaBarang->tampilDepan();
 		$this->load->view('Home', array('data' => $data));	
 		// if($this->session->userdata('isAdmin')==FALSE)
 		// {
