@@ -13,8 +13,8 @@ class Model_kelolaProfil extends CI_Model {
  		}
 
 
-	public function tambahProfil($data){
-      $this->db->insert('user',$data);
+	public function tambahProfil($tableName,$data){
+      $this->db->insert($tableName,$data);
     }
 
 	

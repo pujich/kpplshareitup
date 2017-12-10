@@ -160,7 +160,7 @@
                     <th style="text-align: center;">ID Barang</th>  
                     <th style="text-align: center;">Tanggal Dipinjam</th>
                     <th style="text-align: center;">Tanggal Pengembalian</th>
-                    <th style="text-align: center;"> </th>
+                    <th style="text-align: center;">Delete Transaksi</th>
                 </thead>
                     
                 <tbody style="text-align: center;">

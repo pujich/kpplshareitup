@@ -83,7 +83,7 @@
 			</section>			
 
 			<section class="main-content">
-				<form action="<?php echo base_url(). 'Register/tambahuser'; ?>" method="post">
+				<form action="<?php echo base_url(). 'Register/tambahuser'; ?>" method="post" enctype='multipart/form-data'>
 				<div class="row">
 					<div class="span6">				
 						<h4 class="title" style="margin-left:0px;"><span class="text"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegister</strong> Yourself</span></h4>
@@ -113,7 +113,7 @@
 								<div class="control-group">
 									<label for="ktp" class="control-label" style="margin-left:27px;">Nomor KTP</label>
 									<div class="controls">
-										<input name="ktp" style="margin-left:27px;" type="text" placeholder="Enter your nomor ktp" id="ktp" class="input-xlarge" required>
+										<input name="no_ktp" style="margin-left:27px;" type="text" placeholder="Enter your nomor ktp" id="ktp" class="input-xlarge" required>
 									</div>
 								</div>
 
@@ -165,7 +165,7 @@
 								<div class="control-group">
 									<label for="" class="control-label" style="margin-left:20px;">Foto KTP</label>
 									<div class="controls">
-										<input type="file" name="foto_ktp" style="margin-left:20px;">
+										<input type="file" name="image2" style="margin-left:20px;" required="">
 									</div>
 								</div>
 							
