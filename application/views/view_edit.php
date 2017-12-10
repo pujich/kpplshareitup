@@ -138,9 +138,9 @@
               <td><br><b> Upload gambar </b></td>
               <td><input style="margin-top: 30px; margin-left: 21px" type="file" class="form-control" name="image" value="<?php echo $u->foto_barang?>"></td>
             </tr>
-            
               <td></td>
               <td><input style="width:225px;height:50px;margin-top: 50px" type="submit" value="Simpan"></td>
+              <td><button style="width:225px;height:50px;margin-top: 50px" onclick="window.history.go(-1); return false;" >Cancel</button></td>
             </tr>
           </table>
         </form> 
