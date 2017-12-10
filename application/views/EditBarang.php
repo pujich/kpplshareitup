@@ -63,35 +63,10 @@
     <div id="wrapper" class="container">
       <section class="navbar main-menu">
         <div class="navbar-inner main-menu">        
-          <img src="<?php echo base_url('assets/img/logo.png'); ?> " style="width: 11%; height: 100%; margin-left:-10px;"/>
+          <a href=<?php echo base_url().""?> ><img src="<?php echo base_url('assets/img/logo.png'); ?> " style="width: 11%; height: 100%; margin-left:-10px;"/></a>
 
           <nav id="menu" class="pull-right">
-            <ul>
-              <li><a href="<?php echo base_url("home")?>"> </a>          
-                <!-- <ul>
-                  <li><a href="./products.html">Lacinia nibh</a></li>                 
-                  <li><a href="./products.html">Eget molestie</a></li>
-                  <li><a href="./products.html">Varius purus</a></li>                 
-                </ul> -->
-              </li>                             
-              <li><a href="<?php echo base_url("profile")?>"> </a>
-                <!-- <ul>
-                  <li><a href="./products.html">Lacinia nibh</a></li>                 
-                  <li><a href="./products.html">Eget molestie</a></li>
-                  <li><a href="./products.html">Varius purus</a></li>                 
-                </ul> -->
-              </li>
-              <li><a href="<?php echo base_url("kelola_barang")?>"> </a>
-                <!-- <ul>                 
-                  <li><a href="./products.html">Gifts and Tech</a></li>
-                  <li><a href="./products.html">Ties and Hats</a></li>
-                  <li><a href="./products.html">Cold Weather</a></li>
-                </ul> -->
-              </li>             
-              <!-- <li><a href="./products.html"></a></li>
-              <li><a href="./products.html">Best Seller</a></li>
-              <li><a href="./products.html">Top Seller</a></li> -->
-            </ul>
+            
           </nav>
         </div>
       </section>
@@ -116,7 +91,7 @@
             </tr>
             <tr>
               <td><label style="margin-top: 12px; margin-left: 50px"><b><h4>Deskripsi Barang</h4></b></label></td>
-              <td><textarea style="margin-top: 15px; margin-right: -309px; height: 100px; width: 515px;" type="text" class="form-control" id="nama" name="deskripsi_barang" required=""><?php echo $u->deskripsi_barang ?></textarea></td>
+              <td><textarea style="resize:none; margin-top: 15px; margin-right: -309px; height: 100px; width: 515px;" type="text" class="form-control" id="nama" name="deskripsi_barang" required=""><?php echo $u->deskripsi_barang ?></textarea></td>
             </tr>
             <tr>
             <tr>

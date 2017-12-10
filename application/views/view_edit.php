@@ -116,7 +116,7 @@
             </tr>
             <tr>
               <td><b> Deskripsi Barang </b></td>
-              <td><textarea style="margin-top: 15px; margin-right: -309px; height: 100px; width: 515px;" type="text" class="form-control" id="nama" name="deskripsi_barang" required=""><?php echo $u->deskripsi_barang ?></textarea></td>
+              <td><textarea style="resize:none; margin-top: 15px; margin-right: -309px; height: 100px; width: 515px;" type="text" class="form-control" id="nama" name="deskripsi_barang" required=""><?php echo $u->deskripsi_barang ?></textarea></td>
             </tr>
             <tr>
               <td><br><b> Dipinjam </b></td>
