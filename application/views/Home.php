@@ -49,12 +49,11 @@
     <body>
 
 
-    <form action="<?php echo base_url()."Login/aksi_login"; ?>" method="POST" class="form login">
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" class="search_form">
-						<input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+					<form method="POST" action="<?php echo base_url().'home/cari'?>">
+						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
 					</form>
 				</div>
 				<div class="span8">
@@ -69,7 +68,7 @@
 				</div>
 			</div>
 		</div>
-
+	
 
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
@@ -128,8 +127,9 @@
 								<div id="myCarousel" class="myCarousel carousel slide">
 									<div class="carousel-inner">
 										<div class="active item">
-											<ul class="thumbnails">								<?php foreach ($data as $x) { ?>				
-												<li class="span3">
+											<ul class="thumbnails">								
+											<?php if(empty($data)){echo 'tidak ada barang';}else{ foreach ($data as $x) { ?>				
+												 <li class="span3">
 													<div class="product-box">
 														<span class="sale_tag"></span>
 														<p><a href="product_detail.html"><img src="<?php echo base_url($x['foto_barang']); ?>" alt="" /></a></p>
@@ -139,7 +139,7 @@
 													</div>
 												</li>
 												
-												<?php } ?>
+											<?php }} ?>
 												<!-- <li class="span3">
 													<div class="product-box">
 														<span class="sale_tag"></span>

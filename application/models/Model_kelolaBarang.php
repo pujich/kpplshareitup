@@ -48,6 +48,14 @@ class Model_kelolaBarang extends CI_Model {
 		$this->db->where($where);
 		$this->db->update($table,$data);
 	}
+	
+	function pencarian($where, $table ){
+		$query = $this->db->select('*')
+			->from($table)
+			->or_like($where)
+			->get();
+		return ($query->num_rows() <= 0)? false : $query->result_array();
+	}
 
 }
 ?>
