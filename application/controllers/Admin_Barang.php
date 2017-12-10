@@ -23,7 +23,6 @@ class Admin_Barang extends CI_Controller{
 		
 		$data=$this->Model_kelolaBarang->getDataBarang('barang','','')->result_array();
         $kirim['data']  = $data;
-
 		$this->load->view('Admin_Barang', $kirim);
 		
 		// $now = new DateTime();

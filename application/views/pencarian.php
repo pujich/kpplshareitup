@@ -39,7 +39,7 @@
 		<script src=<?php echo base_url()."assets/themes/js/jquery-1.7.2.min.js";?>></script>
 		<script src=<?php echo base_url()."assets/bootstrap/js/bootstrap.min.js";?>></script>				
 		<script src=<?php echo base_url()."assets/themes/js/superfish.js";?>></script>	
-		<script src=<?php echo base_url()."assets/themes/js/jquery.scrolltotop.js";?>></script>
+		<script src=<?php echo base_url()."assets/themes/js/jquery.scrolltotopCari.js";?>></script>
 		<!--[if lt IE 9]>			
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<script src="js/respond.min.js"></script>
@@ -53,7 +53,7 @@
 			<div class="row">
 				<div class="span4">
 					<form method="POST" action="<?php echo base_url().'home/cari'?>">
-						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
 					</form>
 				</div>
 				<div class="span8">

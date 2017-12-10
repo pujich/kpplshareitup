@@ -172,7 +172,7 @@
                     <td><?php echo date ('d-m-Y',strtotime($x['tgl_dipinjam'])); ?></td>       <!-- MERUBAH FORMAT DATE TGL_DIPINJAM DI DATABASE JADI D/M/Y -->
                     <td><?php echo date ('d-m-Y',strtotime($x['tgl_dikembalikan'])); ?></td>   <!-- MERUBAH FORMAT DATE TGL_DIKEMBALIKAN DI DATABASE JADI D/M/Y -->
                     <td align="center">
-                            <a href="<?php echo base_url()."Admin_Transaksi/deleteTransaksi/".$x['id_peminjam']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
+                            <a href="<?php echo base_url()."Admin_Transaksi/deleteTransaksi/".$x['id_peminjam']; ?>"><button class="btn btn-primary" style="border: solid 0px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
                     </td>
 
                     </tr>

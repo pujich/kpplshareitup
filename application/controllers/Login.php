@@ -5,7 +5,9 @@ class Login extends CI_Controller{
 
 	public function __construct() {
 		parent::__construct();		
-		
+		if($this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME JIKA MEMBUKA HALAMAN LAIN <<<<<<<<<<<<<<<<<<<<<<<<<<
+			redirect('home');
+		}
 		
 		$this->load->helper('url');
 		
@@ -13,7 +15,6 @@ class Login extends CI_Controller{
 	}
 
 	public function index(){
-
 		$user_id=$this->session->userdata('username');
  
 	if($user_id){

@@ -53,7 +53,7 @@
 			<div class="row">
 				<div class="span4">
 					<form method="POST" action="<?php echo base_url().'home/cari'?>">
-						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
 					</form>
 				</div>
 				<div class="span8">
