@@ -12,7 +12,6 @@
 
 		}
 
-<<<<<<< HEAD
 		public function tambahuser() { // Input data register ke database		
         $username = $this->input->post('username');
       	$password  = $this->input->post('password');
@@ -29,18 +28,6 @@
         $config['max_size']             = 100000;
         $config['max_width']            = 1920;
         $config['max_height']           = 1080;
-=======
-		public function tambahuser() { // Input data register ke database
-			
-        $foto_profil=$_FILES['foto_profil']['name'];
-        $foto_ktp=$this->input->post('foto_ktp');
-
-          $config['upload_path']         = './assets/img';
-    $config['allowed_types']        = 'gif|jpg|png';
-    $config['max_size']             = 100000;
-    $config['max_width']            = 1920;
-    $config['max_height']           = 1080;
->>>>>>> master
         
         $this->upload->initialize($config);
 
@@ -48,27 +35,8 @@
         $file1 = preg_replace('/\s+/', '_', $file1);
         $file2 = trim(addslashes('assets/img/'.$_FILES['image2']['name']));     
         $file2 = preg_replace('/\s+/', '_', $file2);
-      	
-        if(!$this->upload->do_upload('image')){ /*JIKA TIDAK UPLOAD FOTO_PROFIL DAN FOTO_KTP*/
-          $data = array (
-            	 'deskripsi'=> 'User',
-            	 'username' => $username,
-             	 'password'  => $sha1,
-               'nama_user'=> $nama,
-             	 'kode_pos' => $kodepos,
-               'alamat'  => $alamat,
-             	 'kecamatan'=> $kecamatan,
-             	 'kelurahan'=> $kelurahan,
-<<<<<<< HEAD
-               'no_ktp'=> $no_ktp,
-               'foto_profil' => $file1,
-               'foto_ktp' => $file2,
-               );  
-          $this->Model_kelolaProfil->tambahProfil('user',$data);
-          echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
-        }
 
-        else if ($this->upload->do_upload('image')) { /*JIKA UPLOAD FOTO_PROFIL / FOTO_KTP*/
+        if ($this->upload->do_upload('image')) { /*JIKA UPLOAD FOTO_KTP*/
           $data1 = array (
                'deskripsi'=> 'User',
                'username' => $username,
@@ -106,29 +74,6 @@
           $this->Model_kelolaProfil->tambahProfil('user',$data_updates);
           echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
         }
-=======
-               // 'foto_profil' => $file1
-               // 'foto_ktp' => $file2
-        	);  
-
-          $this->upload->do_upload('foto_profil');
-
-          if (!$this->upload->do_upload('foto_profil')){
-
-            $poi=$this->upload->display_errors(); echo $poi;
-
-           echo $foto_profil; 
-          }
-          // if ($this->upload->do_upload('foto_ktp')){ 
-          //   $poi=$this->upload->display_errors(); echo $poi;
-          // }
-
-
-        	$this->Model_kelolaProfil->tambahProfil($data);
-			
-			// echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
-		}
->>>>>>> master
 
 	}
 }
