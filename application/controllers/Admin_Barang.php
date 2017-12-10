@@ -47,6 +47,8 @@ class Admin_Barang extends CI_Controller{
 		$nama_barang = $this->input->post('nama_barang');
 		$jenis = $this->input->post('jenis');
 		$deskripsi_barang = $this->input->post('deskripsi_barang');
+		$dipinjam = $this->input->post('dipinjam');
+		$dikembalikan = $this->input->post('dikembalikan');
 
 	 	$config['upload_path']         = './assets/img';
 		$config['allowed_types']        = 'gif|jpg|png';
@@ -66,6 +68,8 @@ class Admin_Barang extends CI_Controller{
         		'nama_barang' => $nama_barang,
 				'jenis' => $jenis,
 				'deskripsi_barang' => $deskripsi_barang,
+				'dipinjam' => $dipinjam,
+				'dikembalikan' => $dikembalikan,
 				);
 
            	$this->Model_kelolaBarang->UpdateData('barang',$data_update,'id_barang ='.$id);
@@ -79,6 +83,8 @@ class Admin_Barang extends CI_Controller{
            		'nama_barang' => $nama_barang,
 				'jenis' => $jenis,
 				'deskripsi_barang' => $deskripsi_barang,
+				'dipinjam' => $dipinjam,
+				'dikembalikan' => $dikembalikan,
 				'foto_barang' => $file1
 				);
 
