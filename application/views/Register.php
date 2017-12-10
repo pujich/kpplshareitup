@@ -83,7 +83,7 @@
 			</section>			
 
 			<section class="main-content">
-				<form action="<?php echo base_url(). 'Register/tambahuser'; ?>" method="post">
+				<form action="<?php echo base_url(). 'Register/tambahuser'; ?>" enctype="multipart/form-data" method="post">
 				<div class="row">
 					<div class="span6">				
 						<h4 class="title" style="margin-left:0px;"><span class="text"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegister</strong> Yourself</span></h4>

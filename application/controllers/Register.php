@@ -14,7 +14,7 @@
 
 		public function tambahuser() { // Input data register ke database
 			
-        $foto_profil=$this->input->post('foto_profil');
+        $foto_profil=$_FILES['foto_profil']['name'];
         $foto_ktp=$this->input->post('foto_ktp');
 
           $config['upload_path']         = './assets/img';
@@ -49,10 +49,12 @@
              	 'kode_pos' => $kodepos,
               	 'alamat'  => $alamat,
              	 'kecamatan'=> $kecamatan,
-             	 'kelurahan'=> $kelurahan
-               // 'foto_profil' => $file1,
+             	 'kelurahan'=> $kelurahan,
+               // 'foto_profil' => $file1
                // 'foto_ktp' => $file2
         	);  
+
+          $this->upload->do_upload('foto_profil');
 
           if (!$this->upload->do_upload('foto_profil')){
 
