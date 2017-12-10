@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2017 at 12:49 PM
+-- Generation Time: Dec 09, 2017 at 09:58 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -89,6 +89,7 @@ CREATE TABLE `user` (
   `kode_pos` varchar(5) NOT NULL,
   `foto_profil` varchar(100) NOT NULL,
   `foto_ktp` varchar(100) NOT NULL,
+  `no_ktp` varchar(20) NOT NULL,
   `deskripsi` varchar(200) NOT NULL,
   `username` varchar(15) NOT NULL,
   `password` varchar(40) NOT NULL,
@@ -99,10 +100,10 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama_user`, `alamat`, `kecamatan`, `kelurahan`, `kode_pos`, `foto_profil`, `foto_ktp`, `deskripsi`, `username`, `password`, `isAdmin`) VALUES
-(1, 'admin', 'Wonorejo Selatan III no. 18', 'Rungkut', 'Kali Rungkut', '60296', '', '', 'Admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
-(2, 'Zakaria Achmad', 'Sukolilo Damai II no. 4', 'Sukolilo', 'Keputih', '60111', '', '', 'User', 'achmadz', '7654ae508ade5a9c01dbd566eca6b5a9d5e2135d', 0),
-(3, 'Supri', 'Wisma Permai II no. 23', 'Mulyorejo', 'Dukuh Sutorejo', '60113', '', '', 'User', 'supri', 'e404fb3a838a8c931b3ef40889cd0cd0b99b0db3', 0);
+INSERT INTO `user` (`id_user`, `nama_user`, `alamat`, `kecamatan`, `kelurahan`, `kode_pos`, `foto_profil`, `foto_ktp`, `no_ktp`, `deskripsi`, `username`, `password`, `isAdmin`) VALUES
+(1, 'admin', 'Wonorejo Selatan III no. 18', 'Rungkut', 'Kali Rungkut', '60296', '', '', '6666666666', 'Admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
+(2, 'Zakaria Achmad', 'Sukolilo Damai II no. 4', 'Sukolilo', 'Keputih', '60111', 'assets/img/profil_zakaria.jpg', '', '7777777777', 'User', 'achmadz', '7654ae508ade5a9c01dbd566eca6b5a9d5e2135d', 0),
+(3, 'Andhika Supriyanto', 'Wisma Permai II no. 23', 'Mulyorejo', 'Dukuh Sutorejo', '60113', 'assets/img/profil_supri.jpg', '', '8888888888', 'User', 'supri', 'e404fb3a838a8c931b3ef40889cd0cd0b99b0db3', 0);
 
 --
 -- Indexes for dumped tables
@@ -142,7 +143,7 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
  
-class Admin_Barang extends CI_Controller{
+class View_Edit extends CI_Controller{
 
 	function __construct(){	
 		parent::__construct();		
@@ -24,7 +24,7 @@ class Admin_Barang extends CI_Controller{
 		$data=$this->Model_kelolaBarang->getDataBarang('barang','','')->result_array();
         $kirim['data']  = $data;
 
-		$this->load->view('Admin_Barang', $kirim);
+		$this->load->view('View_Edit', $kirim);
 		
 		// $now = new DateTime();
 		// $now->setTimezone(new DateTimezone('Asia/Jakarta'));
@@ -42,51 +42,34 @@ class Admin_Barang extends CI_Controller{
 		$this->load->view('view_edit', $data);
 	}
 	
-	public function update(){
+	function update(){
+		
+		
 		$id = $this->input->post('id_barang');
 		$nama_barang = $this->input->post('nama_barang');
 		$jenis = $this->input->post('jenis');
 		$deskripsi_barang = $this->input->post('deskripsi_barang');
-
-	 	$config['upload_path']         = './assets/img';
-		$config['allowed_types']        = 'gif|jpg|png';
-		$config['max_size']             = 100000;
-		$config['max_width']            = 1920;
-		$config['max_height']           = 1080;
-
-		$this->upload->initialize($config);
- 
-   		$file1 = trim(addslashes('assets/img/'.$_FILES['image']['name']));     
-    	$file1 = preg_replace('/\s+/', '_', $file1);
-
-
-    	if(! $this->upload->do_upload('image')){
-
-        	$data_update = array(
-        		'nama_barang' => $nama_barang,
-				'jenis' => $jenis,
-				'deskripsi_barang' => $deskripsi_barang,
-				);
-
-           	$this->Model_kelolaBarang->UpdateData('barang',$data_update,'id_barang ='.$id);
-			redirect('Admin_Barang'); }
-
-        else {
-
-        	$this->upload->do_upload('image');
-
-        	$data_updates = array(
-           		'nama_barang' => $nama_barang,
-				'jenis' => $jenis,
-				'deskripsi_barang' => $deskripsi_barang,
-				'foto_barang' => $file1
-				);
-
-            $this->Model_kelolaBarang->UpdateData('barang',$data_updates,'id_barang ='.$id);
-			redirect('Admin_Barang');
-		}
+	 
+		$data = array(
+			'nama_barang' => $nama_barang,
+			'jenis' => $jenis,
+			'deskripsi_barang' => $deskripsi_barang,
+			'foto_barang' => $foto_barang
+		);
 		
-
+		if ($this->upload('foto_barang')) {
+				$data['foto_barang'] = base_url().'assets/img/'.$this->upload('file');
+			}
+		else{
+				$data['foto_barang'] = '';
+		}
+			
+		$where = array(
+			'id_barang' => $id
+		);
+	 
+		$this->Model_kelolaBarang->update_data($where,$data,'barang');
+		redirect('Admin_Barang');
 	}
 	
 	public function upload($foto_barang){
