@@ -31,12 +31,30 @@
         
         $this->upload->initialize($config);
 
-        $file1 = trim(addslashes('assets/img/'.$_FILES['image']['name']));     
+        $file1 = trim(addslashes('assets/img/'.$_FILES['image']['name']));     /*FOTO PROFILE*/
         $file1 = preg_replace('/\s+/', '_', $file1);
-        $file2 = trim(addslashes('assets/img/'.$_FILES['image2']['name']));     
+        $file2 = trim(addslashes('assets/img/'.$_FILES['image2']['name']));    /*FOTO KTP*/ 
         $file2 = preg_replace('/\s+/', '_', $file2);
 
-        if ($this->upload->do_upload('image')) { /*JIKA UPLOAD FOTO_KTP*/
+        if ($this->upload->do_upload('image2') && $this->upload->do_upload('image')) { /*JIKA UPLOAD FOTO_KTP*/
+          $data2 = array (
+               'deskripsi'=> 'User',
+               'username' => $username,
+               'password'  => $sha1,
+               'nama_user'=> $nama,
+               'kode_pos' => $kodepos,
+               'alamat'  => $alamat,
+               'kecamatan'=> $kecamatan,
+               'kelurahan'=> $kelurahan,
+               'no_ktp'=> $no_ktp,
+               'foto_ktp' => $file2,
+               'foto_profil' => $file1
+               );
+          $this->Model_kelolaProfil->tambahProfil('user',$data2);
+          echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
+        }
+        
+        else {                                                                        /*JIKA UPLOAD FOTO_PROFIL DAN FOTO_KTP*/
           $data1 = array (
                'deskripsi'=> 'User',
                'username' => $username,
@@ -47,31 +65,10 @@
                'kecamatan'=> $kecamatan,
                'kelurahan'=> $kelurahan,
                'no_ktp'=> $no_ktp,
-               'foto_profil' => $file1,
                'foto_ktp' => $file2,
+               'foto_profil' => $file1
                );
           $this->Model_kelolaProfil->tambahProfil('user',$data1);
-          echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
-        }
-
-        else { /*JIKA UPLOAD FOTO_PROFIL DAN FOTO_KTP*/
-          $this->upload->do_upload('image');
-
-          $data_updates = array(
-              'deskripsi'=> 'User',
-               'username' => $username,
-               'password'  => $sha1,
-               'nama_user'=> $nama,
-               'kode_pos' => $kodepos,
-               'alamat'  => $alamat,
-               'kecamatan'=> $kecamatan,
-               'kelurahan'=> $kelurahan,
-               'no_ktp'=> $no_ktp,
-               'foto_profil' => $file1,
-               'foto_ktp' => $file2,
-          );
-
-          $this->Model_kelolaProfil->tambahProfil('user',$data_updates);
           echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
         }
 
