@@ -81,4 +81,10 @@ function __construct(){
 			redirect('post/user');}}
 		else redirect('home/index');}
 
+		public function edit($ID){
+			$where = array('id_barang' => $ID);
+			$data['barang'] = $this->Model_kelolaBarang->edit_data($where,'barang')->result();
+			$this->load->view('EditBarang', $data);
+		}
+
 } ?>

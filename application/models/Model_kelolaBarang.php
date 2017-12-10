@@ -25,10 +25,18 @@ class Model_kelolaBarang extends CI_Model {
 
   		$id_user=$this->session->userdata('id_user');
 
-  		$data=$this->db->query('select * from barang 
-  			inner join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
-  			inner join user on transaksi_barang.id_peminjam=user.id_user where id_pemilik='.$id_user);
-  		return $data->result_array();
+  		// $data=$this->db->query('select * from barang 
+  		// 	inner join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
+  		// 	inner join user on transaksi_barang.id_peminjam=user.id_user where id_pemilik='.$id_user);
+  		// return $data->result_array();
+  		$this->db->select('*');
+   		$this->db->from('barang');
+    	$this->db->join('user', 'user.id_user = barang.id_pemilik');
+    	$this->db->where('id_user ='.$id_user);
+
+    	$data = $this->db->get();
+    	return $data->result_array();
+
   	}
 
 

@@ -112,7 +112,7 @@
             
              <?php 
                 echo '<td class="crud-actions">  
-                  <a href="'.base_url()."index.php/post/useradd/".$row['id_barang'].'" class="btn btn-warning btn-sm">Edit</a>  
+                  <a href="'.base_url()."EditBarang/Edit/".$row['id_barang'].'" class="btn btn-warning btn-sm">Edit</a>  
                   <a href="'.base_url()."index.php/post/deleteBarang/".$row['id_barang'].'" class="btn btn-danger btn-sm">Delete</a>
                 </td>';
                 echo '</tr>';
