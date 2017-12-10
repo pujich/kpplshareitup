@@ -12,6 +12,7 @@
 
 		}
 
+<<<<<<< HEAD
 		public function tambahuser() { // Input data register ke database		
         $username = $this->input->post('username');
       	$password  = $this->input->post('password');
@@ -28,6 +29,18 @@
         $config['max_size']             = 100000;
         $config['max_width']            = 1920;
         $config['max_height']           = 1080;
+=======
+		public function tambahuser() { // Input data register ke database
+			
+        $foto_profil=$_FILES['foto_profil']['name'];
+        $foto_ktp=$this->input->post('foto_ktp');
+
+          $config['upload_path']         = './assets/img';
+    $config['allowed_types']        = 'gif|jpg|png';
+    $config['max_size']             = 100000;
+    $config['max_width']            = 1920;
+    $config['max_height']           = 1080;
+>>>>>>> master
         
         $this->upload->initialize($config);
 
@@ -46,6 +59,7 @@
                'alamat'  => $alamat,
              	 'kecamatan'=> $kecamatan,
              	 'kelurahan'=> $kelurahan,
+<<<<<<< HEAD
                'no_ktp'=> $no_ktp,
                'foto_profil' => $file1,
                'foto_ktp' => $file2,
@@ -92,6 +106,29 @@
           $this->Model_kelolaProfil->tambahProfil('user',$data_updates);
           echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
         }
+=======
+               // 'foto_profil' => $file1
+               // 'foto_ktp' => $file2
+        	);  
+
+          $this->upload->do_upload('foto_profil');
+
+          if (!$this->upload->do_upload('foto_profil')){
+
+            $poi=$this->upload->display_errors(); echo $poi;
+
+           echo $foto_profil; 
+          }
+          // if ($this->upload->do_upload('foto_ktp')){ 
+          //   $poi=$this->upload->display_errors(); echo $poi;
+          // }
+
+
+        	$this->Model_kelolaProfil->tambahProfil($data);
+			
+			// echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
+		}
+>>>>>>> master
 
 	}
 }

@@ -107,24 +107,23 @@
 								<address>
 									<strong>Nama Barang:</strong> <span><?php echo $x['nama_barang']; ?></span><br>
 									<strong>Jenis:</strong> <span><?php echo $x['jenis']; ?></span><br>
-									<strong>Reward Points:</strong> <span>0</span><br>
-									<strong>Availability:</strong> <span>Out Of Stock</span><br>								
+									<strong>Deskripsi:</strong> <span><?php echo $x['deskripsi_barang']; ?></span><br>
+														
 								</address>									
-								<h4><strong>Price: $587.50</strong></h4>
+								
 							</div>
 							<?php } ?>
 							<div class="span5">
-								<form class="form-inline">
+								<form class="form-inline" action="<?php echo base_url('Barang_detail/pinjam_barang'); ?>" method="post" enctype='multipart/form-data'>
 									<label class="checkbox">
-										<input type="checkbox" value=""> Option one is this and that
+										<input type="hidden" value="<?php echo $x['id_barang']; ?>" name='id_barang'> 
 									</label>
 									<br/>
 									<label class="checkbox">
-									  <input type="checkbox" value=""> Be sure to include why it's great
+									  <input type="date" value="" name="date"> 
 									</label>
 									<p>&nbsp;</p>
-									<label>Qty:</label>
-									<input type="text" class="span1" placeholder="1">
+									
 									<button class="btn btn-inverse" type="submit">Pinjam</button>
 								</form>
 							</div>							

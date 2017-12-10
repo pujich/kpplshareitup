@@ -2,10 +2,10 @@
 
 class Model_kelolaBarang extends CI_Model {
 
-	public function tampilDetail() {
+	public function tampilDepan() {
 
 		$data = $this->db->query('SELECT * FROM (
-  SELECT * FROM barang ORDER BY id_barang DESC LIMIT 4
+  SELECT * FROM barang WHERE dipinjam=0 ORDER BY id_barang DESC LIMIT 4
 ) as r ORDER BY id_barang');
 		
 		return $data->result_array();	
@@ -25,7 +25,9 @@ class Model_kelolaBarang extends CI_Model {
 
   		$id_user=$this->session->userdata('id_user');
 
-  		$data=$this->db->query('select * from barang where id_pemilik='.$id_user);
+  		$data=$this->db->query('select * from barang 
+  			inner join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
+  			inner join user on transaksi_barang.id_peminjam=user.id_user where id_pemilik='.$id_user);
   		return $data->result_array();
   	}
 
@@ -64,6 +66,24 @@ class Model_kelolaBarang extends CI_Model {
 			->get();
 		return ($query->num_rows() <= 0)? false : $query->result_array();
 	}
+
+	function pinjamBarang($item){
+
+		$this->db->insert('transaksi_barang', $item );
+
+		$this->db->query('UPDATE barang SET dipinjam = 1 WHERE barang.id_barang = '.$item['id_barang']);
+		// $this->db->update('barang', 'dipinjam=1', 'barang.id_barang',$item['id_barang']);
+
+		// $query = $this->db->select('*')
+  //                 ->from('barang')
+  //                 ->join('transaksi_barang', 'id_barang = '.$item)
+  //                 ->get();
+
+		// return $query;
+
+	}
+
+
 
 }
 ?>
