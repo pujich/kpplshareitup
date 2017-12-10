@@ -164,7 +164,8 @@
                     <th style="text-align: center;">Dipinjam</th>
                     <th style="text-align: center;">Dikembalikan</th>
                     <th style="text-align: center;">ID Pemilik</th>
-                    <th style="text-align: center;"> </th>
+                    <th style="text-align: center;">Edit Barang</th>
+                    <th style="text-align: center;">Delete Barang</th>
                 </thead>
                     
                 <tbody style="text-align: center;">
