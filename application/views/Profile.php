@@ -30,8 +30,8 @@
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" class="search_form">
-						<input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
+					<form method="POST" action="<?php echo base_url().'home/cari'?>">
+						<input type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
 					</form>
 				</div>
 				<div class="span8">
