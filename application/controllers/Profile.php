@@ -21,6 +21,8 @@ public function edit_profil(){
 		$alamat = $_POST['alamat'];
 		$kodepos =  $_POST['kodepos'];
         $deskripsi = $_POST['deskripsi'];
+        $kelurahan = $_POST['kelurahan'];
+		$kecamatan =  $_POST['kecamatan'];
         
 	 	$config['upload_path']         = './assets/img';
 		$config['allowed_types']        = 'gif|jpg|png';
@@ -42,7 +44,9 @@ public function edit_profil(){
         $data_update = array(
         	'nama_user' => $nama_user, 
         	'alamat' => $alamat , 
-        	'kode_pos' =>$kodepos, 
+        	'kode_pos' =>$kodepos,
+        	'kelurahan' => $kelurahan, 
+        	'kecamatan' =>$kecamatan, 
         	'deskripsi'=>$deskripsi);
         
            	$this->Model_futsal->UpdateData('user',$data_update,'id_user ='.$id);
@@ -57,7 +61,9 @@ public function edit_profil(){
            	'nama_user' => $nama_user, 
         	'alamat' => $alamat , 
         	'kode_pos' =>$kodepos, 
-        	'deskripsi'=>$deskripsi, 
+        	'deskripsi'=>$deskripsi,
+        	'kelurahan' => $kelurahan, 
+        	'kecamatan' =>$kecamatan, 
            	'foto_profil'=>$file1);
             
             $this->Model_futsal->UpdateData('user',$data_updates,'id_user ='.$id);

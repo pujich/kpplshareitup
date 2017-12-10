@@ -127,31 +127,39 @@
 							<!-- body modal -->
 							<form method="POST" action="<?php echo site_url()."/Profile/edit_profil/"; ?>" enctype='multipart/form-data'>
 							<div class="modal-body">
+								<div class="form-group">
+		  							<label for="fotoprofil">Foto Profil</label>
+		  							<input style="width: 500px;" type="file" class="form-control" name="image" value="<?php echo ($x['foto_profil']); ?>">
+								</div><br>
 								<div class="form-group"> 
 		  							<label for="nama">Nama Lengkap</label>
-		  							<textarea style="width: 515px;" type="text" class="form-control" id="nama" name="nama" required=""><?php echo $x['nama_user']; ?></textarea>
+		  							<textarea style="width: 500px;" type="text" class="form-control" id="nama" name="nama" required=""><?php echo $x['nama_user']; ?></textarea>
 								</div>
 								<div class="form-group"> 
 		  							<label for="alamat">Alamat</label>
-		  							<input style="width: 515px;" type="text" class="form-control" id="alamat" name="alamat" required="" value="<?php echo $x['alamat']; ?>">
+		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="alamat" required="" value="<?php echo $x['alamat']; ?>">
+								</div>
+								<div class="form-group"> 
+		  							<label for="alamat">Kelurahan</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="kelurahan" required="" value="<?php echo $x['kelurahan']; ?>">
+								</div>
+								<div class="form-group"> 
+		  							<label for="alamat">Kecamatan</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="kecamatan" required="" value="<?php echo $x['kecamatan']; ?>">
 								</div>
 								<div class="form-group"> 
 		  							<label for="kodepos">Kode Pos</label>
-		  							<input style="width: 515px;" type="text" class="form-control" id="kodepos" name="kodepos" required="" value="<?php echo $x['kode_pos']; ?>">
+		  							<input style="width: 500px;" type="text" class="form-control" id="kodepos" name="kodepos" required="" value="<?php echo $x['kode_pos']; ?>">
 								</div>
 								<div class="form-group"> 
 		  							<label for="deskripsi">Deskripsi</label>
-		  							<input style="width: 515px;" type="text" class="form-control" id="deskripsi" name="deskripsi" required="" value="<?php echo $x['deskripsi']; ?>">
-								</div>
-								<div class="form-group">
-		  							<label for="fotoprofil">Foto Profil</label>
-		  							<input style="width: 515px;" type="file" class="form-control" name="image" value="<?php echo ($x['foto_profil']); ?>">
-								</div>
+		  							<input style="width: 500px;" type="text" class="form-control" id="deskripsi" name="deskripsi" required="" value="<?php echo $x['deskripsi']; ?>">
+								</div><br>
 
 							</div>
 							<!-- footer modal -->
 							<div class="modal-footer">
-								<button type="submit" class="btn btn-default">Kirim</button>
+								<button type="submit" class="btn btn-default">Simpan</button>
 							</div>
 							</div>
 						</div>
