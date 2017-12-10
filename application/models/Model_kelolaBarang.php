@@ -5,7 +5,7 @@ class Model_kelolaBarang extends CI_Model {
 	public function tampilDetail() {
 
 		$data = $this->db->query('SELECT * FROM (
-  SELECT * FROM barang ORDER BY id_barang DESC LIMIT 8
+  SELECT * FROM barang ORDER BY id_barang DESC LIMIT 4
 ) as r ORDER BY id_barang');
 		
 		return $data->result_array();	
@@ -29,7 +29,7 @@ class Model_kelolaBarang extends CI_Model {
   		return $data->result_array();
   	}
 
-  	
+
   	public function getDetailBarang($item){
   		// $this->db->where_in('id_barang', $item);
   		$data=$this->db->query('select * from barang where id_barang='.$item);
