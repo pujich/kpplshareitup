@@ -103,7 +103,12 @@
 								</address>									
 								
 							</div>
-							<?php } ?>
+							
+
+							<?php if ($this->session->userdata('id_user')==$x['id_pemilik']) {?>
+								<div class="span5">
+								<a class="btn btn-warning btn-sm" href="<?php echo base_url('EditBarang/Edit/'.$x['id_barang']) ?>">Edit barang</a> </div>
+							<?php } else { ?>	
 							<div class="span5">
 								<form class="form-inline" action="<?php echo base_url('Barang_detail/pinjam_barang'); ?>" method="post" enctype='multipart/form-data'>
 									<label class="checkbox">
@@ -118,7 +123,10 @@
 									
 									<button class="btn btn-inverse" type="submit">Pinjam</button>
 								</form>
-							</div>							
+							</div>	
+							<?php } } ?>		
+
+
 						</div>
 						<div class="row">
 							<div class="span9">
