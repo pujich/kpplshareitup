@@ -115,9 +115,9 @@
 								</div>
 
 								<div class="control-group">
-									<label for="ktp" class="control-label" style="margin-left:27px;">Nomor KTP</label>
+									<label for="no_telp" class="control-label" style="margin-left:27px;">Nomor Telp</label>
 									<div class="controls">
-										<input name="no_ktp" style="margin-left:27px;" type="text" placeholder="Enter your nomor ktp" id="ktp" class="input-xlarge" required>
+										<input name="no_telp" style="margin-left:27px;" type="text" placeholder="Enter your nomor telp" id="no_telp" class="input-xlarge" required>
 									</div>
 								</div>
 
@@ -160,9 +160,9 @@
 								</div>
 
 								<div class="control-group">
-									<label for="kelurahan" class="control-label" style="margin-left:20px;">Kelurahan</label>
+									<label for="no_ktp" class="control-label" style="margin-left:20px;">Nomor KTP</label>
 									<div class="controls">
-										<input name="kelurahan" style="margin-left:20px;" type="text" placeholder="Enter your kelurahan" id="kelurahan" class="input-xlarge" required>
+										<input name="no_ktp" style="margin-left:20px;" type="text" placeholder="Enter your nomor ktp" id="no_ktp" class="input-xlarge" required>
 									</div>
 								</div>
 

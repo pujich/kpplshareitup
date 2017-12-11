@@ -114,7 +114,9 @@
 				
 						<?php } ?>
 						</form>
+
 						</center>
+						
 					</div>
 					<!-- Modal -->
 					<div id="myModal" class="modal fade" role="dialog">
@@ -135,23 +137,23 @@
 								</div><br>
 								<div class="form-group"> 
 		  							<label for="nama">Nama Lengkap</label>
-		  							<textarea style="width: 500px;" type="text" class="form-control" id="nama" name="nama" required=""><?php echo $x['nama_user']; ?></textarea>
+		  							<textarea style="resize:none;width: 500px;" type="text" class="form-control" id="nama" name="nama" required=""><?php echo $x['nama_user']; ?></textarea>
 								</div>
 								<div class="form-group"> 
 		  							<label for="alamat">Alamat</label>
 		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="alamat" required="" value="<?php echo $x['alamat']; ?>">
 								</div>
 								<div class="form-group"> 
-		  							<label for="alamat">Kecamatan</label>
-		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="kecamatan" required="" value="<?php echo $x['kelurahan']; ?>">
+		  							<label for="kecamatan">Kecamatan</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="kecamatan" name="kecamatan" required="" value="<?php echo $x['kecamatan']; ?>">
 								</div>
 								<div class="form-group"> 
-		  							<label for="alamat">Kode Pos</label>
-		  							<input style="width: 500px;" type="text" class="form-control" id="kode_pos" name="kode_pos" required="" value="<?php echo $x['kecamatan']; ?>">
+		  							<label for="kode_pos">Kode Pos</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="kode_pos" name="kode_pos" required="" value="<?php echo $x['kode_pos']; ?>">
 								</div>
 								<div class="form-group"> 
-		  							<label for="kodepos">Nomor Telpon</label>
-		  							<input style="width: 500px;" type="text" class="form-control" id="_no_telp" name="no_telp" required="" value="<?php echo $x['kode_pos']; ?>">
+		  							<label for="_no_telp">Nomor Telpon</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="_no_telp" name="no_telp" required="" value="<?php echo $x['no_telp']; ?>">
 								</div>
 								<div class="form-group"> 
 		  							<label for="deskripsi">Deskripsi</label>

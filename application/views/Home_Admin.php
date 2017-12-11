@@ -160,7 +160,7 @@
                     <th style="text-align: center;">Nama</th>  
                     <th style="text-align: center;">Alamat</th>
                     <th style="text-align: center;">Kecamatan</th>
-                    <th style="text-align: center;">Kelurahan</th>
+                    <th style="text-align: center;">No Telp</th>
                     <th style="text-align: center;">Kode Pos</th>
                     <th style="text-align: center;">Foto Profil</th>
                     <th style="text-align: center;">Foto KTP</th>
@@ -175,7 +175,7 @@
                     <td><?php echo $x['nama_user']; ?></td>
                     <td><?php echo $x['alamat']; ?></td>
                     <td><?php echo $x['kecamatan']; ?></td>
-                    <td><?php echo $x['kelurahan']; ?></td>
+                    <td><?php echo $x['no_telp']; ?></td>
                     <td><?php echo $x['kode_pos']; ?></td>
                     <td><?php echo $x['foto_profil']; ?></td>
                     <td><?php echo $x['foto_ktp']; ?></td>

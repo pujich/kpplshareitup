@@ -20,7 +20,7 @@
       	$kodepos = $this->input->post('kodepos');
       	$alamat = $this->input->post('alamat');
       	$kecamatan = $this->input->post('kecamatan');
-      	$kelurahan = $this->input->post('kelurahan');
+      	$no_telp = $this->input->post('no_telp');
         $no_ktp = $this->input->post('no_ktp');
 
         $config['upload_path']         = './assets/img';
@@ -45,7 +45,7 @@
                'kode_pos' => $kodepos,
                'alamat'  => $alamat,
                'kecamatan'=> $kecamatan,
-               'kelurahan'=> $kelurahan,
+               'no_telp'=> $no_telp,
                'no_ktp'=> $no_ktp,
                'foto_ktp' => $file2,
                'foto_profil' => $file1
@@ -63,7 +63,7 @@
                'kode_pos' => $kodepos,
                'alamat'  => $alamat,
                'kecamatan'=> $kecamatan,
-               'kelurahan'=> $kelurahan,
+               'no_telp'=> $no_telp,
                'no_ktp'=> $no_ktp,
                'foto_ktp' => $file2,
                'foto_profil' => $file1
