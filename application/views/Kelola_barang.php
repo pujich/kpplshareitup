@@ -78,7 +78,7 @@
 			
 			<section class="header_text sub">
 			<!--<img class="pageBanner" src="themes/images/pageBanner.png" alt="<?php echo $this->session->userdata('username'); ?>" >-->
-				<h4><span>LIST BARANG</span></h4>
+				<h4><span>BARANG SAYA</span></h4>
 			</section>
 			<?=anchor('post', 
                         'Post Barang', 
@@ -87,29 +87,37 @@
 
             <thead>
               <tr>
-                <th>ID Barang</th>
                 <th>Nama Barang</th>
+                <th></th>
                 <th>Jenis Barang</th>
-                <th>Foto Barang</th>
-                <th>Deskripsi barang</th>
+                <th>Peminjam</th>
+                <th>Tanggal Dipinjam</th>
+                <th>Deadline Dikembalikan</th>
               </tr>
             </thead>
 
             <tbody>
-              <?php
-              foreach($data as $row)
-              {
-                echo '<tr>';
-                echo '<td>'.$row['id_barang'].'</td>';
-                echo '<td>'.$row['nama_barang'].'</td>';
-                echo '<td>'.$row['jenis'].'</td>';
-                echo '<td>'.'<img src=" '. base_url(
-                $row['foto_barang']) .' " width="150" height="150">'.'</td>' ;
-                echo '<td>'.$row['deskripsi_barang'].'</td>';
-                echo '</tr>';
-              ?>
-                <td>  </td>
             
+               
+            
+                <?php
+              foreach($data as $row)
+              {	?>
+
+              	<tr>
+              		<td><?php echo $row['nama_barang']; ?></td>
+              		<td><img src=" <?php echo base_url(
+                $row['foto_barang']); ?> " width="150" height="150"></td>
+                	<td><?php echo $row['jenis']; ?></td>
+                	<td><?php if ($row['nama_user']==null) {echo '-'; ?><td>-</td><td>-</td> <?php } 
+                else { ?> <a href=" <?php echo base_url('Profile/profil_user?id_user=').$row['id_user']; ?> "> <?php echo $row['nama_user']; ?> </a></td>
+                	<td><?php echo $row['tgl_dipinjam']; ?></td>
+                	<td><?php echo $row['tgl_dikembalikan']; ?></td>
+              <?php 
+
+
+          } ?>
+               <td>  </td>
              <?php 
                 echo '<td class="crud-actions">  
                   <a href="'.base_url()."EditBarang/Edit/".$row['id_barang'].'" class="btn btn-warning btn-sm">Edit</a>  

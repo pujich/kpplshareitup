@@ -68,6 +68,16 @@ public function edit_profil(){
             
             $this->Model_futsal->UpdateData('user',$data_updates,'id_user ='.$id);
 			redirect('profile'); }}
-	}
+	
+
+    public function profil_user(){
+
+        $user=$this->input->get('id_user');
+        $data = $this->Model_kelolaProfil->tampilProfil($user);
+        $this->load->view('Profile'
+        , array('data' => $data)
+        );  }
+
+    }
 
 ?>
