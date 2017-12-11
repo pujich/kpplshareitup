@@ -36,4 +36,11 @@ class Home extends CI_Controller{
 		$this->load->view('pencarian', $data);	
 	}
 	
+	public function urut($parameter){
+		$where = array('kecamatan' => $parameter, 'kelurahan' => $parameter);
+		$hasil = $this->Model_kelolaBarang->urutan($where, 'user');
+		$data = array('data'=>$hasil);
+		$this->load->view('pencarian', $data);	
+	}
+	
 } ?>

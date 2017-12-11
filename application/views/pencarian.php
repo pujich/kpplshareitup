@@ -87,19 +87,19 @@
 			</section>
 			<section class="main-content">
 			<div class="span2" style="margin-top:20px; float:right">
-			<form method="GET" action="<?php echo base_url().'home/cari'?>">
+			<form method="GET" action="<?php echo base_url().'home/urut'?>">
 				<div class="dropdown">
 				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sort By Location
 					<span class="caret"></span>
 				</button>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header">Kelurahan</li>
-						<li><a href="<?php echo base_url().'home/sort'?>">Sugih</a></li>
-						<li><a href="#">Waras</a></li>
-						<li><a href="#">Abadi</a></li>
+						<li name="urutan"><a href="<?php echo base_url().'home/urut/sukolilo'?>">Sukolilo</a></li>
+						<li name="urutan"><a href="<?php echo base_url().'home/urut/Mulyorejo'?>">Mulyorejo</a></li>
+						<li name="urutan"><a href="<?php echo base_url().'home/urut/sukolilo'?>">Abadi</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Kecamatan</li>
-						<li><a href="#">Bagong</a></li>
+						<li name="urutan"><a href="#">Bagong</a></li>
 					</ul>
 				</div>
 			</div>
