@@ -78,9 +78,9 @@ class Model_kelolaBarang extends CI_Model {
 	function urutan($where, $table ){
 		$query = $this->db->select('*')
 			->from($table)
+			->join('barang','id_pemilik = id_user')
 			->where($where)
 			->get();
-		$this->db->join('barang','id_pemilik = id_user');
 		return ($query->num_rows() <= 0)? false : $query->result_array();
 	}
 
