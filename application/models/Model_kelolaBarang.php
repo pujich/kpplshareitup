@@ -39,10 +39,17 @@ class Model_kelolaBarang extends CI_Model {
 
   	}
 
+  	public function getBarangPinjam(){
+
+  		//coming soon :" sabar
+  	}
+
 
   	public function getDetailBarang($item){
   		// $this->db->where_in('id_barang', $item);
-  		$data=$this->db->query('select * from barang where id_barang='.$item);
+  		$data=$this->db->query('select * from barang 
+  			join user on barang.id_pemilik=user.id_user
+  			where id_barang='.$item);
 
   		return $data->result_array();
   	}

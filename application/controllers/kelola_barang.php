@@ -20,7 +20,10 @@ public function index(){
 			
 	}
 
+public function borrowed(){
 
+	$this->load->view('Terpinjam');
+}
 
 public function kembalikan_barang(){
 		

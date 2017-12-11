@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Profil Anda</title>
+		<title>Share-it-up! : List Barang</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
@@ -37,7 +37,7 @@
 				<div class="span8">
 					<div class="account pull-right">
 						<ul class="user-menu">				
-						<li><b>Hi, <?php echo $this->session->userdata('nama_user'); ?></b></li>
+							<li><b>Hi, <?php echo $this->session->userdata('nama_user'); ?></b></li>
 							<li><a style="padding: 3px 5px;" class="btn btn-inverse large" href="<?php echo site_url('Logout'); ?>">Logout</a></li>		
 						</ul>
 					</div>
@@ -47,7 +47,7 @@
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<img src="<?php echo base_url('assets/img/logo.png'); ?> " style="width: 11%; height: 100%; margin-left:-10px;"/>
+					<a href=<?php echo base_url().""?> class="logo pull-left"><img src="<?php echo base_url('assets/img/logo.png'); ?>" class="site_logo" alt="" style="margin-left:-10px; width:11%;height:11%;"></a>
 					<nav id="menu" class="pull-right">
 						<ul>
 							<li><a href="<?php echo base_url("home")?>">Home</a>					
@@ -62,70 +62,86 @@
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
 									<li><a href="./products.html">Varius purus</a></li>									
-								</ul> -->								
-							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
+								</ul> -->	
+								</li>							
+							<li><a href="<?php echo base_url("Kelola_barang")?>">Barang</a>
 								<!-- <ul>									
 									<li><a href="./products.html">Gifts and Tech</a></li>
 									<li><a href="./products.html">Ties and Hats</a></li>
 									<li><a href="./products.html">Cold Weather</a></li>
 								</ul> -->
+								</li>
 						</ul>
 					</nav>
 				</div>
 			</section>							
-			<!-- <section class="google_map">
-				<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=74%2F6+Nguy%E1%BB%85n+V%C4%83n+Tho%E1%BA%A1i,+S%C6%A1n+Tr%C3%A0,+%C4%90%C3%A0+N%E1%BA%B5ng,+Vi%E1%BB%87t+Nam&amp;aq=0&amp;oq=74%2F6+Nguyen+Van+Thoai+Da+Nang,+Viet+Nam&amp;sll=37.0625,-95.677068&amp;sspn=41.546728,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=74+Nguy%E1%BB%85n+V%C4%83n+Tho%E1%BA%A1i,+Ng%C5%A9+H%C3%A0nh+S%C6%A1n,+Da+Nang,+Vietnam&amp;t=m&amp;ll=16.064537,108.24151&amp;spn=0.032992,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-			</section> -->
-			<?php foreach ($data as $x) { ?>
-
-
+			
 			<section class="header_text sub">
-			<!-- <img class="pageBanner" src="<?php echo base_url("assets/img/GBP.jpg"); ?>" alt="Share-It-Up" > --><div class="col-md-12 ">
-                                        <center>
-                                            <a class="" >
-                                                <img class="media-object dp img-circle" src="<?php echo base_url($x['foto_profil']); ?>" style="width: 180px;height:180px;">
-                                            </a>
-                                        </center>
-                                        <h3><?php echo $x['nama_user']; ?></h3>
-                                    </div> 
-				<h4>My Profile</span></h4>
+			<!--<img class="pageBanner" src="themes/images/pageBanner.png" alt="<?php echo $this->session->userdata('username'); ?>" >-->
+				<h4><span>BARANG YANG SAYA PINJAM</span></h4>
 			</section>
-			<!-- <section class="header_text sub">
-			<img class="pageBanner" src="themes/images/pageBanner.png" alt="<?php echo $this->session->userdata('username'); ?>" >
-				<h4><span>My Profile</span></h4>
-			</section> -->
-			<section class="main-content">				
-				<div class="row">				
-				
-					<div class="span12"> 
-						<center>
-						<p>Nama Lengkap</p>
-						<h4><?php echo $x['nama_user']; ?></h4>
-						<p>Alamat</p>
-						<h4><?php echo $x['alamat']; ?>, <?php echo $x['kecamatan']; ?>, <?php echo $x['kode_pos']; ?></h4>
-						<p>Email</p>
-						<h4><?php echo $x['email']; ?></h4>
-						<p>Nomor Telpon</p>
-						<h4><?php echo $x['no_telp']; ?></h4>
-						<p>Tentang saya</p>
-						<h4><?php echo $x['deskripsi']; ?></h4>
-						<!-- Tombol untuk menampilkan modal-->
-						<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Profil</button> -->
-				
-						<?php } ?>
-						</form>
-						</center>
-					</div>
-				
-							<!-- footer modal -->
-							<div class="modal-footer">
-								<button type="submit" class="btn btn-default">Simpan</button>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<?=anchor('post', 
+                        'Post Barang', 
+                        ['class'=>'btn btn-primary btn-sm'])?>
+
+              <a class="btn btn-default btn-sm" href="<?php echo base_url('Kelola_barang'); ?>">Barang milik saya</a>
+
+			<table id="kpplshareitupTable" class="table table-striped table bordered table-hover">   
+
+            <thead>
+              <tr>
+                <th>Nama Barang</th>
+                <th></th>
+                <th>Jenis Barang</th>
+                <th>Peminjam</th>
+                <th>Tanggal Dipinjam</th>
+                <th>Deadline Dikembalikan</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            
+               
+            
+             <!--    <?php
+              foreach($data as $row)
+              {	?>
+
+              	<tr>
+              		<td><?php echo $row['nama_barang']; ?></td>
+              		<td><img src=" <?php echo base_url(
+                $row['foto_barang']); ?> " width="150" height="150"></td>
+                	<td><?php echo $row['jenis']; ?></td>
+                	<td><?php if ($row['nama_user']==null) {echo '-'; ?><td>-</td><td>-</td> <?php } 
+                else { ?> <a href=" <?php echo base_url('Profile/profil_user?id_user=').$row['id_user']; ?> "> <?php echo $row['nama_user']; ?> </a></td>
+                	<td><?php echo $row['tgl_dipinjam']; ?></td>
+                	<td><?php echo $row['tgl_dikembalikan']; ?></td>
+              <?php 
+
+
+          } ?>
+               <td>  </td>
+             <?php 
+                echo '<td class="crud-actions">  
+                  <a href="'.base_url()."EditBarang/Edit/".$row['id_barang'].'" class="btn btn-warning btn-sm">Edit</a>  
+                  <a href="'.base_url()."index.php/post/deleteBarang/".$row['id_barang'].'" class="btn btn-danger btn-sm">Delete</a>
+                </td>';
+                echo '</tr>';
+              } ?>   -->
+
+            </tbody>
+          </table>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    
+    <script>
+      $(document).ready(function()
+      {
+           $('#kpplshareitupTable').DataTable();
+      });
+    </script>
+
 			<section id="footer-bar">
 				<div class="row">
 					<div class="span3">
@@ -161,7 +177,7 @@
 				</div>	
 			</section>
 			<section id="copyright">
-				<span>Copyright ©Share-It-Up 2017</span>
+				<span>Copyright 2013 bootstrappage template  All right reserved.</span>
 			</section>
 		</div>
 		<script src="themes/js/common.js"></script>		

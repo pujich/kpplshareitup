@@ -73,41 +73,23 @@
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<a href=<?php echo base_url().""?> class="logo pull-left"><img src="assets/img/logo.png" class="site_logo" alt="" style="margin-left:-10px; width:11%;height:11%;"></a>
+					<img src="<?php echo base_url('assets/img/logo.png'); ?> " style="width: 11%; height: 100%; margin-left:-10px;"/>
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="<?php echo base_url("home")?>">Home</a>					
-								<!-- <ul>
-									<li><a href="./products.html">Lacinia nibh</a></li>									
-									<li><a href="./products.html">Eget molestie</a></li>
-									<li><a href="./products.html">Varius purus</a></li>									
-								</ul> -->
+								<li><a href="<?php echo base_url("home")?>">Home</a>					
 							</li>															
 							<li><a href="<?php echo base_url("profile")?>">Profil</a>
-								<!-- <ul>
-									<li><a href="./products.html">Lacinia nibh</a></li>									
-									<li><a href="./products.html">Eget molestie</a></li>
-									<li><a href="./products.html">Varius purus</a></li>									
-								</ul> -->
 							</li>
-							<li><a href="">Barang</a>
-								<!-- <ul>									
-									<li><a href="./products.html">Gifts and Tech</a></li>
-									<li><a href="./products.html">Ties and Hats</a></li>
-									<li><a href="./products.html">Cold Weather</a></li>
-								</ul> -->
-							</li>							
-							<!-- <li><a href="./products.html"></a></li>
-							<li><a href="./products.html">Best Seller</a></li>
-							<li><a href="./products.html">Top Seller</a></li> -->
+							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
 			</section>
 			
 			<section class="header_text">
-				<strong> SHARE. SHARE. SHARE.
-				<br/>SHARE IT UP! </strong>
+			<img class="pageBanner" src="<?php echo base_url("assets/img/GBP.jpg"); ?>" alt="Share-It-Up" >
+				<br/> </strong>
 			</section>
 			<section class="main-content">
 				<div class="row">

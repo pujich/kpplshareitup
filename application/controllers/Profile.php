@@ -19,9 +19,9 @@ public function edit_profil(){
 
 		$nama_user = $_POST['nama'];
 		$alamat = $_POST['alamat'];
-		$kodepos =  $_POST['kodepos'];
+		$kodepos =  $_POST['kode_pos'];
         $deskripsi = $_POST['deskripsi'];
-        $kelurahan = $_POST['kelurahan'];
+        $no_telp = $_POST['no_telp'];
 		$kecamatan =  $_POST['kecamatan'];
         
 	 	$config['upload_path']         = './assets/img';
@@ -45,7 +45,7 @@ public function edit_profil(){
         	'nama_user' => $nama_user, 
         	'alamat' => $alamat , 
         	'kode_pos' =>$kodepos,
-        	'kelurahan' => $kelurahan, 
+        	'no_telp' => $no_telp, 
         	'kecamatan' =>$kecamatan, 
         	'deskripsi'=>$deskripsi);
         
@@ -62,7 +62,7 @@ public function edit_profil(){
         	'alamat' => $alamat , 
         	'kode_pos' =>$kodepos, 
         	'deskripsi'=>$deskripsi,
-        	'kelurahan' => $kelurahan, 
+        	'no_telp' => $no_telp, 
         	'kecamatan' =>$kecamatan, 
            	'foto_profil'=>$file1);
             

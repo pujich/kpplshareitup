@@ -47,7 +47,7 @@
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<a href=<?php echo base_url().""?> class="logo pull-left"><img src="assets/img/logo.png" class="site_logo" alt="" style="margin-left:-10px; width:11%;height:11%;"></a>
+					<a href=<?php echo base_url().""?> class="logo pull-left"><img src="<?php echo base_url('assets/img/logo.png'); ?>" class="site_logo" alt="" style="margin-left:-10px; width:11%;height:11%;"></a>
 					<nav id="menu" class="pull-right">
 						<ul>
 							<li><a href="<?php echo base_url("home")?>">Home</a>					
@@ -83,6 +83,9 @@
 			<?=anchor('post', 
                         'Post Barang', 
                         ['class'=>'btn btn-primary btn-sm'])?>
+
+             <a class="btn btn-default btn-sm" href="<?php echo base_url('Kelola_barang/borrowed'); ?>">Barang yang saya pinjam</a>
+
 			<table id="kpplshareitupTable" class="table table-striped table bordered table-hover">   
 
             <thead>

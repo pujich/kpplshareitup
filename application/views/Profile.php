@@ -102,10 +102,12 @@
 						<p>Nama Lengkap</p>
 						<h4><?php echo $x['nama_user']; ?></h4>
 						<p>Alamat</p>
-						<h4><?php echo $x['alamat']; ?>, <?php echo $x['kelurahan']; ?>, <?php echo $x['kecamatan']; ?></h4>
-						<p>Kode Pos</p>
-						<h4><?php echo $x['kode_pos']; ?></h4>
-						<p>Deskripsi</p>
+						<h4><?php echo $x['alamat']; ?>, <?php echo $x['kecamatan']; ?>, <?php echo $x['kode_pos']; ?></h4>
+						<p>Email</p>
+						<h4><?php echo $x['email']; ?></h4>
+						<p>Nomor Telpon</p>
+						<h4><?php echo $x['no_telp']; ?></h4>
+						<p>Tentang saya</p>
 						<h4><?php echo $x['deskripsi']; ?></h4>
 						<!-- Tombol untuk menampilkan modal-->
 						<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit Profil</button>
@@ -140,16 +142,16 @@
 		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="alamat" required="" value="<?php echo $x['alamat']; ?>">
 								</div>
 								<div class="form-group"> 
-		  							<label for="alamat">Kelurahan</label>
-		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="kelurahan" required="" value="<?php echo $x['kelurahan']; ?>">
-								</div>
-								<div class="form-group"> 
 		  							<label for="alamat">Kecamatan</label>
-		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="kecamatan" required="" value="<?php echo $x['kecamatan']; ?>">
+		  							<input style="width: 500px;" type="text" class="form-control" id="alamat" name="kecamatan" required="" value="<?php echo $x['kelurahan']; ?>">
 								</div>
 								<div class="form-group"> 
-		  							<label for="kodepos">Kode Pos</label>
-		  							<input style="width: 500px;" type="text" class="form-control" id="kodepos" name="kodepos" required="" value="<?php echo $x['kode_pos']; ?>">
+		  							<label for="alamat">Kode Pos</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="kode_pos" name="kode_pos" required="" value="<?php echo $x['kecamatan']; ?>">
+								</div>
+								<div class="form-group"> 
+		  							<label for="kodepos">Nomor Telpon</label>
+		  							<input style="width: 500px;" type="text" class="form-control" id="_no_telp" name="no_telp" required="" value="<?php echo $x['kode_pos']; ?>">
 								</div>
 								<div class="form-group"> 
 		  							<label for="deskripsi">Deskripsi</label>
