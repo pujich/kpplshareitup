@@ -76,9 +76,12 @@ function __construct(){
 		function deleteBarang($id_barang){
     	if($this->session->userdata('id_user')){
     		$wheree = array('id_barang' => $id_barang);
-			$res = $this->Model_futsal->delete('barang',$wheree);
+			$res = $this->Model_kelolaBarang->delete_item_barang($id_barang);
 			if($res>=1){
-			redirect('post/user');}}
+			redirect('post');
+			}
+			redirect('Kelola_barang');
+		}
 		else redirect('home/index');}
 
 		public function edit($ID){
