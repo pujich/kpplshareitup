@@ -52,9 +52,7 @@
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" action="<?php echo base_url().'home/cari'?>">
-						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
-					</form>
+					
 				</div>
 				<div class="span8">
 					<div class="account pull-right">
@@ -87,15 +85,46 @@
 					</nav>
 				</div>
 			</section>
-			<section class="header_text sub">
-			<img class="pageBanner" src="<?php echo base_url("assets/themes/images/carousel/banner-1.jpg"); ?>" alt="Share-It-Up" >
-				<h4><span>Share the kindness</span></h4>
-			</section>
-			<section class="header_text">
-				We stand for top quality templates. Our genuine developers always optimized bootstrap commercial templates. 
-				<br/>Don't miss it
-			</section>
 			<section class="main-content">
+			<div class="span2" style="margin-top:20px; float:right">
+			<form method="GET" action="<?php echo base_url().'home/cari'?>">
+				<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sort By Location
+					<span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu">
+						<li class="dropdown-header">Kelurahan</li>
+						<li><a href="<?php echo base_url().'home/sort'?>">Sugih</a></li>
+						<li><a href="#">Waras</a></li>
+						<li><a href="#">Abadi</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Kecamatan</li>
+						<li><a href="#">Bagong</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			</form>
+			<div class="span4" style="margin-top:20px; float:right">
+			<form method="POST" action="<?php echo base_url().'home/cari'?>">
+						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
+			</form>
+			</div>
+			<!-- <div class="span4" style="margin-top:20px; float:right">
+				<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li class="dropdown-header">Dropdown header 1</li>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JavaScript</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Dropdown header 2</li>
+						<li><a href="#">About Us</a></li>
+					</ul>
+				</div>
+			</div>-->
 				<div class="row">
 					<div class="span12">													
 						<div class="row">
