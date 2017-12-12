@@ -21,7 +21,11 @@
       	$alamat = $this->input->post('alamat');
       	$kecamatan = $this->input->post('kecamatan');
       	$no_telp = $this->input->post('no_telp');
+<<<<<<< HEAD
         $no_ktp = $this->input->post('no_ktp');
+=======
+        $email = $this->input->post('email');
+>>>>>>> master
 
         $config['upload_path']         = './assets/img';
         $config['allowed_types']        = 'gif|jpg|png';
@@ -45,8 +49,13 @@
                'kode_pos' => $kodepos,
                'alamat'  => $alamat,
                'kecamatan'=> $kecamatan,
+<<<<<<< HEAD
                'no_telp'=> $no_telp,
                'no_ktp'=> $no_ktp,
+=======
+               'email'=> $email,
+               'no_telp'=> $no_telp,
+>>>>>>> master
                'foto_ktp' => $file2,
                'foto_profil' => $file1
                );
@@ -63,8 +72,13 @@
                'kode_pos' => $kodepos,
                'alamat'  => $alamat,
                'kecamatan'=> $kecamatan,
+<<<<<<< HEAD
                'no_telp'=> $no_telp,
                'no_ktp'=> $no_ktp,
+=======
+               'email'=> $email,
+               'no_telp'=> $no_telp,
+>>>>>>> master
                'foto_ktp' => $file2,
                'foto_profil' => $file1
                );
