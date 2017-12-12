@@ -115,15 +115,13 @@
 								</div>
 
 								<div class="control-group">
-<<<<<<< HEAD
-									<label for="no_telp" class="control-label" style="margin-left:27px;">Nomor Telp</label>
+									<label for="no_telp" class="control-label" style="margin-left:27px;">Nomor HP</label>
 									<div class="controls">
 										<input name="no_telp" style="margin-left:27px;" type="text" placeholder="Enter your nomor telp" id="no_telp" class="input-xlarge" required>
-=======
-									<label for="ktp" class="control-label" style="margin-left:27px;">E-mail</label>
+
+									<label for="email" class="control-label" style="margin-left:27px;">E-mail</label>
 									<div class="controls">
 										<input name="email" style="margin-left:27px;" type="text" placeholder="Enter your email" id="email" class="input-xlarge" required>
->>>>>>> master
 									</div>
 								</div>
 
@@ -166,15 +164,10 @@
 								</div>
 
 								<div class="control-group">
-<<<<<<< HEAD
 									<label for="no_ktp" class="control-label" style="margin-left:20px;">Nomor KTP</label>
 									<div class="controls">
 										<input name="no_ktp" style="margin-left:20px;" type="text" placeholder="Enter your nomor ktp" id="no_ktp" class="input-xlarge" required>
-=======
-									<label for="kelurahan" class="control-label" style="margin-left:20px;">Nomor HP</label>
-									<div class="controls">
-										<input name="no_telp" style="margin-left:20px;" type="text" placeholder="Enter your kelurahan" id="no_telp" class="input-xlarge" required>
->>>>>>> master
+									
 									</div>
 								</div>
 
@@ -191,7 +184,7 @@
 								</div>
 								<hr>
 								<div class="control-group">
-									<input tabindex="3" class="btn btn-inverse large" style="margin-left:27px;" type="submit" value="Sign me up!">
+									<input tabindex="3" class="btn btn-inverse large" style="margin-left:20px;" type="submit" value="Sign me up!">
 									<hr>
 									<!-- <p class="reset" style="margin-left:27px;">Recover your <a tabindex="4" href="#" title="Recover your username or password">username or password</a></p> -->
 								</div>
