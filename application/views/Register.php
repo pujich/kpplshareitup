@@ -119,10 +119,7 @@
 									<div class="controls">
 										<input name="no_telp" style="margin-left:27px;" type="text" placeholder="Enter your nomor telp" id="no_telp" class="input-xlarge" required>
 
-									<label for="email" class="control-label" style="margin-left:27px;">E-mail</label>
-									<div class="controls">
-										<input name="email" style="margin-left:27px;" type="text" placeholder="Enter your email" id="email" class="input-xlarge" required>
-									</div>
+									
 								</div>
 
 								<div class="control-group">
@@ -164,10 +161,9 @@
 								</div>
 
 								<div class="control-group">
-									<label for="no_ktp" class="control-label" style="margin-left:20px;">Nomor KTP</label>
+									<label for="email" class="control-label" style="margin-left:20px;">E-mail</label>
 									<div class="controls">
-										<input name="no_ktp" style="margin-left:20px;" type="text" placeholder="Enter your nomor ktp" id="no_ktp" class="input-xlarge" required>
-									
+										<input name="email" style="margin-left:20px;" type="text" placeholder="Enter your email" id="email" class="input-xlarge" required>
 									</div>
 								</div>
 

@@ -21,7 +21,6 @@
       	$alamat = $this->input->post('alamat');
       	$kecamatan = $this->input->post('kecamatan');
       	$no_telp = $this->input->post('no_telp');
-        $no_ktp = $this->input->post('no_ktp');
         $email = $this->input->post('email');
 
 
@@ -38,7 +37,7 @@
         $file2 = trim(addslashes('assets/img/'.$_FILES['image2']['name']));    /*FOTO KTP*/ 
         $file2 = preg_replace('/\s+/', '_', $file2);
 
-        if ($this->upload->do_upload('image2') && $this->upload->do_upload('image')) { /*JIKA UPLOAD FOTO_KTP*/
+        if ($this->upload->do_upload('image2') && $this->upload->do_upload('image')) {  /*JIKA UPLOAD FOTO_PROFIL DAN FOTO_KTP*/
           $data2 = array (
                'deskripsi'=> 'User',
                'username' => $username,
@@ -48,7 +47,6 @@
                'alamat'  => $alamat,
                'kecamatan'=> $kecamatan,
                'no_telp'=> $no_telp,
-               'no_ktp'=> $no_ktp,
                'email'=> $email,
                'foto_ktp' => $file2,
                'foto_profil' => $file1
@@ -57,7 +55,7 @@
           echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
         }
         
-        else {                                                                        /*JIKA UPLOAD FOTO_PROFIL DAN FOTO_KTP*/
+        else {                                                                        /*JIKA UPLOAD FOTO_KTP*/
           $data1 = array (
                'deskripsi'=> 'User',
                'username' => $username,
@@ -66,7 +64,6 @@
                'kode_pos' => $kodepos,
                'alamat'  => $alamat,
                'kecamatan'=> $kecamatan,
-               'no_ktp'=> $no_ktp,
                'email'=> $email,
                'no_telp'=> $no_telp,
                'foto_ktp' => $file2,
