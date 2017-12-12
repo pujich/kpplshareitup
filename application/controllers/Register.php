@@ -5,6 +5,7 @@
 		public function __construct() {
     		parent:: __construct();
     		$this->load->Model('Model_kelolaProfil');
+			//$this->load->library('form_validation');
 		}
 
 		public function index() {
@@ -13,6 +14,10 @@
 		}
 
 		public function tambahuser() { // Input data register ke database		
+		
+		//$this->form_validation->set_rules('email', 'Email', 'required');
+		
+		//if ($this->form_validation->run()) {
         $username = $this->input->post('username');
       	$password  = $this->input->post('password');
       	$sha1 = sha1($password);
@@ -72,6 +77,7 @@
           $this->Model_kelolaProfil->tambahProfil('user',$data1);
           echo "<script>alert('Anda berhasil mendaftar') ; window.location.href = '../'</script>";
         }
+		//}
 
 	}
 }

@@ -161,9 +161,9 @@
 								</div>
 
 								<div class="control-group">
-									<label for="email" class="control-label" style="margin-left:20px;">E-mail</label>
+									<label type="email" for="email" class="control-label" style="margin-left:20px;">E-mail</label>
 									<div class="controls">
-										<input name="email" style="margin-left:20px;" type="text" placeholder="Enter your email" id="email" class="input-xlarge" required>
+										<input name="email" style="margin-left:20px;" type="email" placeholder="Enter your email" id="email" class="input-xlarge" required>
 									</div>
 								</div>
 
