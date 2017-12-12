@@ -157,7 +157,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               	<thead>
                     <th style="text-align: center;">ID Peminjam</th>
-                    <th style="text-align: center;">ID Barang</th>  
+                    <th style="text-align: center;">ID Barang Peminjam</th>  
                     <th style="text-align: center;">Tanggal Dipinjam</th>
                     <th style="text-align: center;">Tanggal Pengembalian</th>
                     <th style="text-align: center;">Delete Transaksi</th>
@@ -168,7 +168,7 @@
                     <tr>
                        
                     <td><?php echo $x['id_peminjam']; ?></td>
-                    <td><?php echo $x['id_barang']; ?></td>
+                    <td><?php echo $x['id_barangP']; ?></td>
                     <td><?php echo date ('d-m-Y',strtotime($x['tgl_dipinjam'])); ?></td>       <!-- MERUBAH FORMAT DATE TGL_DIPINJAM DI DATABASE JADI D/M/Y -->
                     <td><?php echo date ('d-m-Y',strtotime($x['tgl_dikembalikan'])); ?></td>   <!-- MERUBAH FORMAT DATE TGL_DIKEMBALIKAN DI DATABASE JADI D/M/Y -->
                     <td align="center">

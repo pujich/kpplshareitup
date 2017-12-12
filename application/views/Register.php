@@ -86,8 +86,6 @@
 
 				<form action="<?php echo base_url(). 'Register/tambahuser'; ?>" method="post" enctype='multipart/form-data'>
 
-				<form action="<?php echo base_url(). 'Register/tambahuser'; ?>" enctype="multipart/form-data" method="post">
-
 				<div class="row">
 					<div class="span6">				
 						<h4 class="title" style="margin-left:0px;"><span class="text"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegister</strong> Yourself</span></h4>
@@ -117,7 +115,7 @@
 								<div class="control-group">
 									<label for="no_telp" class="control-label" style="margin-left:27px;">Nomor HP</label>
 									<div class="controls">
-										<input name="no_telp" style="margin-left:27px;" type="text" placeholder="Enter your nomor telp" id="no_telp" class="input-xlarge" required>
+										<input name="no_telp" style="margin-left:27px;" type="number" placeholder="Enter your nomor telp" id="no_telp" class="input-xlarge" required>
 
 									
 								</div>

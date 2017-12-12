@@ -19,20 +19,6 @@ function __construct(){
 
 	}
 
-	// public function user(){
-	// 	if($this->session->userdata('id_user')){
-	// 		$data['barang'] = $this->Model_futsal->getBarang();
-	// 		$this->load->view('list', $data);
-	// 	}
-	// 	else redirect('home');
-	// }
-	// public function useradd(){
-	// 	if($this->session->userdata('id_user')){
-	// 		$data['barang'] = $this->Model_futsal->getBarang();
-	// 		$this->load->view('post', $data);
-	// 	}
-	// 	else redirect('home');
-	// }
 	public function createBarang(){
 		if($this->session->userdata('id_user')){
     		if (isset($_POST['btnSubmit'])){
@@ -60,29 +46,31 @@ function __construct(){
 			$res = $this->Model_kelolaBarang->postBarang($data_insert);
 
 			if($res == true){
-                            redirect('Kelola_barang');}
-                        else{
-                            redirect('post');}}}
+                redirect('Kelola_barang');}
+            else{
+                redirect('post');}}}
 		else redirect('home');}
 
 		function uploadBarang($id_barang){
 			if($this->session->userdata('id_user')){
 				$where = array('id_barang' => $id_barang);
 	        	$upd = $this->Model_futsal->updateData('barang', $data_insert, $where);
+	        	
 	        	if ($upd >= 1) {
-	    	redirect('post/user');}}
-	else redirect('post/useradd');}
+	    			redirect('post/user');}}
+			else redirect('post/useradd');}
 			
 		function deleteBarang($id_barang){
-    	if($this->session->userdata('id_user')){
-    		$wheree = array('id_barang' => $id_barang);
-			$res = $this->Model_kelolaBarang->delete_item_barang($id_barang);
-			if($res>=1){
-			redirect('post');
+    		if($this->session->userdata('id_user')){
+    			$wheree = array('id_barang' => $id_barang);
+				$res = $this->Model_kelolaBarang->delete_item_barang($id_barang);
+				
+				if($res>=1){
+					redirect('post');
+				}
+				redirect('Kelola_barang');
 			}
-			redirect('Kelola_barang');
-		}
-		else redirect('home/index');}
+			else redirect('home/index');}
 
 		public function edit($ID){
 			$where = array('id_barang' => $ID);
