@@ -23,7 +23,7 @@ class Model_kelolaBarang extends CI_Model {
 
   	public function getBarangUser($id_user){
 
-  		$id_user=$this->session->userdata('id_user');
+  		// $id_user=$this->session->userdata('id_user');
 
   		$data=$this->db->query('select * from barang 
   			left join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
@@ -39,7 +39,16 @@ class Model_kelolaBarang extends CI_Model {
 
   	}
 
-  	public function getBarangPinjam(){
+  	public function getBarangPinjam($id_user){
+
+  		// $id_user=$this->session->userdata('id_user');
+
+  		$data=$this->db->query('select * from barang 
+  			join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
+  			join user on barang.id_pemilik=user.id_user 
+  			where id_peminjam='.$id_user );
+
+  		return $data->result_array();
 
   		//coming soon :" sabar
   	}
@@ -49,7 +58,7 @@ class Model_kelolaBarang extends CI_Model {
   		// $this->db->where_in('id_barang', $item);
   		$data=$this->db->query('select * from barang 
   			join user on barang.id_pemilik=user.id_user
-  			where id_barang='.$item);
+  			where dipinjam=1&&id_barang='.$item);
 
   		return $data->result_array();
   	}
@@ -104,6 +113,16 @@ class Model_kelolaBarang extends CI_Model {
   //                 ->get();
 
 		// return $query;
+
+	}
+
+	function kembalikanBarang($item){
+
+		// $this->db->insert('transaksi_barang', $item );
+		$this->db->query('UPDATE barang SET dipinjam = 0 WHERE barang.id_barang = '.$item);
+		$this->db->query('UPDATE barang SET dikembalikan = 1 WHERE barang.id_barang = '.$item);
+		
+
 
 	}
 

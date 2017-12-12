@@ -118,8 +118,8 @@
 					</div>
 				
 							<!-- footer modal -->
-							<div class="modal-footer">
-								<button type="submit" class="btn btn-default">Simpan</button>
+							<!-- <div class="modal-footer">
+								<button type="submit" class="btn btn-default">Simpan</button> -->
 							</div>
 							</div>
 						</div>

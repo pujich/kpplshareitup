@@ -93,7 +93,7 @@
                 <th>Nama Barang</th>
                 <th></th>
                 <th>Jenis Barang</th>
-                <th>Peminjam</th>
+                <th>Pemilik</th>
                 <th>Tanggal Dipinjam</th>
                 <th>Deadline Dikembalikan</th>
               </tr>
@@ -103,7 +103,7 @@
             
                
             
-             <!--    <?php
+                <?php if(empty($data)){echo 'tidak ada barang';}else{
               foreach($data as $row)
               {	?>
 
@@ -116,18 +116,20 @@
                 else { ?> <a href=" <?php echo base_url('Profile/profil_user?id_user=').$row['id_user']; ?> "> <?php echo $row['nama_user']; ?> </a></td>
                 	<td><?php echo $row['tgl_dipinjam']; ?></td>
                 	<td><?php echo $row['tgl_dikembalikan']; ?></td>
+
+                	<td>  </td>
+
+              <td> <?php if ($row['dikembalikan']==0 && $row['dipinjam']==1) { ?> 
+              	<form action="<?php echo base_url('Kelola_barang/kembalikan_barang'); ?>" method="post"> <input type="hidden" value="<?php echo $row['id_barang']; ?>" name='id_barang'> 
+
+               	<button class="btn btn-basic" type="submit">Kembalikan</button>
+               </form><?php } else {echo 'Sudah dikembalikan';} ?></td> 
               <?php 
 
 
-          } ?>
-               <td>  </td>
-             <?php 
-                echo '<td class="crud-actions">  
-                  <a href="'.base_url()."EditBarang/Edit/".$row['id_barang'].'" class="btn btn-warning btn-sm">Edit</a>  
-                  <a href="'.base_url()."index.php/post/deleteBarang/".$row['id_barang'].'" class="btn btn-danger btn-sm">Delete</a>
-                </td>';
-                echo '</tr>';
-              } ?>   -->
+          } } } ?>
+               
+            
 
             </tbody>
           </table>

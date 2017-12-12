@@ -96,6 +96,7 @@
                 <th>Peminjam</th>
                 <th>Tanggal Dipinjam</th>
                 <th>Deadline Dikembalikan</th>
+                <th>Status</th>
               </tr>
             </thead>
 
@@ -112,10 +113,14 @@
               		<td><img src=" <?php echo base_url(
                 $row['foto_barang']); ?> " width="150" height="150"></td>
                 	<td><?php echo $row['jenis']; ?></td>
-                	<td><?php if ($row['nama_user']==null) {echo '-'; ?><td>-</td><td>-</td> <?php } 
+                	<td><?php if ($row['nama_user']==null) {echo '-'; ?><td>-</td><td>-</td><td>-</td> <?php } 
                 else { ?> <a href=" <?php echo base_url('Profile/profil_user?id_user=').$row['id_user']; ?> "> <?php echo $row['nama_user']; ?> </a></td>
                 	<td><?php echo $row['tgl_dipinjam']; ?></td>
                 	<td><?php echo $row['tgl_dikembalikan']; ?></td>
+                	<td><?php if ($row['dipinjam']==1 && $row['dikembalikan']==0) {echo 'Sedang dipinjam';}
+                	else {echo 'Sudah dikembalikan';}
+                	 ?></td>
+                	}
               <?php 
 
 

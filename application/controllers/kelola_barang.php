@@ -22,11 +22,22 @@ public function index(){
 
 public function borrowed(){
 
-	$this->load->view('Terpinjam');
+	$id=$this->session->userdata('id_user');
+	$data= $this->Model_kelolaBarang->getBarangPinjam($id);
+	$this->load->view('Terpinjam', array('data'=>$data));
 }
 
 public function kembalikan_barang(){
-		
+
+		$id_barang=$this->input->post('id_barang');
+		$this->Model_kelolaBarang->kembalikanBarang($id_barang);
+
+	               echo "<script>alert('Barang berhasil dikembalikan') </script>";
+			
+			redirect('Kelola_barang/borrowed');
+               
+	
+
 			
 	}
 
