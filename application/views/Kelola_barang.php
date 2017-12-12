@@ -115,8 +115,8 @@
                 	<td><?php echo $row['jenis']; ?></td>
                 	<td><?php if ($row['nama_user']==null) {echo '-'; ?><td>-</td><td>-</td><td>-</td> <?php } 
                 else { ?> <a href=" <?php echo base_url('Profile/profil_user?id_user=').$row['id_user']; ?> "> <?php echo $row['nama_user']; ?> </a></td>
-                	<td><?php echo $row['tgl_dipinjam']; ?></td>
-                	<td><?php echo $row['tgl_dikembalikan']; ?></td>
+                	<td><?php echo date ('d-m-Y',strtotime($row['tgl_dipinjam'])); ?></td>
+                	<td><?php echo date ('d-m-Y',strtotime($row['tgl_dikembalikan'])); ?></td>
                 	<td><?php if ($row['dipinjam']==1 && $row['dikembalikan']==0) {echo 'Sedang dipinjam';}
                 	else {echo 'Sudah dikembalikan';} }
                 	 ?></td>
