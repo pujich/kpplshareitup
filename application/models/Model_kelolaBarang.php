@@ -26,7 +26,7 @@ class Model_kelolaBarang extends CI_Model {
   		// $id_user=$this->session->userdata('id_user');
 
   		$data=$this->db->query('select * from barang 
-  			left join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
+  			left join transaksi_barang on barang.id_barang=transaksi_barang.id_barangP
   			left join user on transaksi_barang.id_peminjam=user.id_user where id_pemilik='.$id_user);
   		return $data->result_array();
   		// $this->db->select('*');
@@ -44,7 +44,7 @@ class Model_kelolaBarang extends CI_Model {
   		// $id_user=$this->session->userdata('id_user');
 
   		$data=$this->db->query('select * from barang 
-  			join transaksi_barang on barang.id_barang=transaksi_barang.id_barang
+  			join transaksi_barang on barang.id_barang=transaksi_barang.id_barangP
   			join user on barang.id_pemilik=user.id_user 
   			where id_peminjam='.$id_user );
 

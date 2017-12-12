@@ -23,7 +23,7 @@ public function pinjam_barang(){
 
 	$data = array (
 				 'id_peminjam' => $this->session->userdata('id_user'),
-            	 'id_barang'=> $id_barang,
+            	 'id_barangP'=> $id_barang,
             	 'tgl_dipinjam' => date('Y-m-d'),
              	 'tgl_dikembalikan'  => $date);
                  
