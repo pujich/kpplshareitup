@@ -37,7 +37,7 @@ class Home extends CI_Controller{
 	}
 	
 	public function urut($parameter){
-		$where = array('kecamatan' => $parameter, 'kelurahan' => $parameter);
+		$where = array('kecamatan' => $parameter);
 		$hasil = $this->Model_kelolaBarang->urutan($where, 'user');
 		$data = array('data'=>$hasil);
 		$this->load->view('pencarian', $data);	
