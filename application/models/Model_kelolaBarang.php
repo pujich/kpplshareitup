@@ -17,8 +17,11 @@ class Model_kelolaBarang extends CI_Model {
   	}
 
   	public function delete_item_barang($item){ // Delete barang data di database
-    	$this->db->where_in('id_barang', $item);
-    	$this->db->delete('barang');
+    	$this->db->query('SET FOREIGN_KEY_CHECKS=0');
+
+    	$this->db->query(' DELETE FROM barang WHERE id_barang='.$item);
+    	// $this->db->where_in('id_barang', $item);
+    	// $this->db->delete('barang');
   	}
 
   	public function getBarangUser($id_user){
