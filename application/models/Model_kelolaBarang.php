@@ -104,7 +104,7 @@ class Model_kelolaBarang extends CI_Model {
 
 		$this->db->insert('transaksi_barang', $item );
 
-		$this->db->query('UPDATE barang SET dipinjam = 1 WHERE barang.id_barang = '.$item['id_barang']);
+		$this->db->query('UPDATE barang SET dipinjam = 1 WHERE barang.id_barang = '.$item['id_barangP']);
 		// $this->db->update('barang', 'dipinjam=1', 'barang.id_barang',$item['id_barang']);
 
 		// $query = $this->db->select('*')
