@@ -177,8 +177,8 @@
                     <td><?php echo $x['kecamatan']; ?></td>
                     <td><?php echo $x['no_telp']; ?></td>
                     <td><?php echo $x['kode_pos']; ?></td>
-                    <td><?php echo $x['foto_profil']; ?></td>
-                    <td><?php echo $x['foto_ktp']; ?></td>
+                    <td><a href="<?php echo base_url($x['foto_profil']); ?>"><img src="<?php echo base_url($x['foto_profil']); ?>" alt="" style="width: 180px;height:180px;" /></a></td>
+                    <td><a href="<?php echo base_url($x['foto_ktp']); ?>"><img src="<?php echo base_url($x['foto_ktp']); ?>" alt="" style="width: 180px;height:180px;" /></a></td>
                     <td><?php echo $x['deskripsi']; ?></td>
 
                         
