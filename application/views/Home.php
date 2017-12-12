@@ -210,7 +210,7 @@
 						<br/>
 						<div class="row">
 							<div class="span12">
-								<h4 class="title">
+								<!-- <h4 class="title">
 									<span class="pull-left"><span class="text"><span class="line">Latest <strong>Products</strong></span></span></span>
 									<span class="pull-right">
 										<a class="left button" href="#myCarousel-2" data-slide="prev"></a><a class="right button" href="#myCarousel-2" data-slide="next"></a>
@@ -292,7 +292,7 @@
 											</ul>
 										</div>
 									</div>							
-								</div>
+								</div> -->
 							</div>						
 						</div>
 						<div class="row feature_box">	

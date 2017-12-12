@@ -103,7 +103,7 @@
             
                
             
-                <?php if(empty($data)){echo 'tidak ada barang';}else{
+                <?php 
               foreach($data as $row)
               {	?>
 
@@ -127,7 +127,7 @@
               <?php 
 
 
-          } } } ?>
+          } }  ?>
                
             
 

@@ -58,7 +58,7 @@ class Model_kelolaBarang extends CI_Model {
   		// $this->db->where_in('id_barang', $item);
   		$data=$this->db->query('select * from barang 
   			join user on barang.id_pemilik=user.id_user
-  			where dipinjam=1&&id_barang='.$item);
+  			where id_barang='.$item);
 
   		return $data->result_array();
   	}
