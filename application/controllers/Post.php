@@ -6,7 +6,7 @@ class Post extends CI_Controller{
 function __construct(){	
 		parent::__construct();		
 		 if(!$this->session->userdata('id_user'))
-			redirect('login');
+			redirect('Login');
 		
 		$this->load->model('Model_kelolaBarang');
 	}
@@ -14,7 +14,7 @@ function __construct(){
 	public function index(){
 		//$data['results'] = $this->Model_futsal->login_user($username,$pass);
         //$this->load->helper(array('form','url'));
-		 $this->load->view('post');	
+		 $this->load->view('Post');	
 		
 
 	}
@@ -48,8 +48,8 @@ function __construct(){
 			if($res == true){
                 redirect('Kelola_barang');}
             else{
-                redirect('post');}}}
-		else redirect('home');}
+                redirect('Post');}}}
+		else redirect('Home');}
 
 		function uploadBarang($id_barang){
 			if($this->session->userdata('id_user')){
@@ -57,8 +57,8 @@ function __construct(){
 	        	$upd = $this->Model_futsal->updateData('barang', $data_insert, $where);
 	        	
 	        	if ($upd >= 1) {
-	    			redirect('post/user');}}
-			else redirect('post/useradd');}
+	    			redirect('Post/user');}}
+			else redirect('Post/useradd');}
 			
 		function deleteBarang($id_barang){
     		if($this->session->userdata('id_user')){
@@ -66,11 +66,11 @@ function __construct(){
 				$res = $this->Model_kelolaBarang->delete_item_barang($id_barang);
 				
 				if($res>=1){
-					redirect('post');
+					redirect('Post');
 				}
 				redirect('Kelola_barang');
 			}
-			else redirect('home/index');}
+			else redirect('Home/index');}
 
 		public function edit($ID){
 			$where = array('id_barang' => $ID);

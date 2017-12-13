@@ -67,21 +67,21 @@
 
           <nav id="menu" class="pull-right">
             <ul>
-              <li><a href="<?php echo base_url("home")?>"> </a>          
+              <li><a href="<?php echo base_url("Home")?>"> </a>          
                 <!-- <ul>
                   <li><a href="./products.html">Lacinia nibh</a></li>                 
                   <li><a href="./products.html">Eget molestie</a></li>
                   <li><a href="./products.html">Varius purus</a></li>                 
                 </ul> -->
               </li>                             
-              <li><a href="<?php echo base_url("profile")?>"> </a>
+              <li><a href="<?php echo base_url("Profile")?>"> </a>
                 <!-- <ul>
                   <li><a href="./products.html">Lacinia nibh</a></li>                 
                   <li><a href="./products.html">Eget molestie</a></li>
                   <li><a href="./products.html">Varius purus</a></li>                 
                 </ul> -->
               </li>
-              <li><a href="<?php echo base_url("kelola_barang")?>"> </a>
+              <li><a href="<?php echo base_url("Kelola_barang")?>"> </a>
                 <!-- <ul>                 
                   <li><a href="./products.html">Gifts and Tech</a></li>
                   <li><a href="./products.html">Ties and Hats</a></li>

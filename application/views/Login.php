@@ -113,7 +113,7 @@
 					<div class="span7">					
 						<h4 class="title" style="margin-left:0px;"><span class="text">&nbsp&nbsp&nbsp&nbsp&nbspDon't have account?<strong>&nbspRegister</strong></span></h4>
 						
-						<form action="<?php echo base_url("register");?>" >		
+						<form action="<?php echo base_url("Register");?>" >		
 								
 								<div style="margin-left:20px;"><button tabindex="9" class="btn btn-inverse large"  action="<?php echo base_url("Register"); ?>" >Create Your Own Account</button></div>
 							</form>					

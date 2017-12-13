@@ -50,14 +50,14 @@
 					<a href=<?php echo base_url().""?> class="logo pull-left"><img src="<?php echo base_url('assets/img/logo.png'); ?>" class="site_logo" alt="" style="margin-left:-10px; width:11%;height:11%;"></a>
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="<?php echo base_url("home")?>">Home</a>					
+							<li><a href="<?php echo base_url("Home")?>">Home</a>					
 								<!-- <ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
 									<li><a href="./products.html">Varius purus</a></li>									
 								</ul> -->
 							</li>															
-							<li><a href="<?php echo base_url("profile")?>">Profil</a>
+							<li><a href="<?php echo base_url("Profile")?>">Profil</a>
 								<!-- <ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
@@ -80,7 +80,7 @@
 			<!--<img class="pageBanner" src="themes/images/pageBanner.png" alt="<?php echo $this->session->userdata('username'); ?>" >-->
 				<h4><span>BARANG YANG SAYA PINJAM</span></h4>
 			</section>
-			<?=anchor('post', 
+			<?=anchor('Post', 
                         'Post Barang', 
                         ['class'=>'btn btn-primary btn-sm'])?>
 

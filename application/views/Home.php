@@ -52,7 +52,7 @@
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" action="<?php echo base_url().'home/cari'?>">
+					<form method="POST" action="<?php echo base_url().'Home/cari'?>">
 						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
 					</form>
 				</div>
@@ -75,21 +75,21 @@
 
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="<?php echo base_url("home")?>">Home</a>					
+							<li><a href="<?php echo base_url("Home")?>">Home</a>					
 								<!-- <ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
 									<li><a href="./products.html">Varius purus</a></li>									
 								</ul> -->
 							</li>															
-							<li><a href="<?php echo base_url("profile")?>">Profil</a>
+							<li><a href="<?php echo base_url("Profile")?>">Profil</a>
 								<!-- <ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
 									<li><a href="./products.html">Varius purus</a></li>									
 								</ul> -->
 							</li>
-							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
+							<li><a href="<?php echo base_url("Kelola_barang")?>">Barang</a>
 								<!-- <ul>									
 									<li><a href="./products.html">Gifts and Tech</a></li>
 									<li><a href="./products.html">Ties and Hats</a></li>

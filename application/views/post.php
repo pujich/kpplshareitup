@@ -76,11 +76,11 @@
 					<img src="<?php echo base_url('assets/img/logo.png'); ?> " style="width: 11%; height: 100%; margin-left:-10px;"/>
 					<nav id="menu" class="pull-right">
 						<ul>
-								<li><a href="<?php echo base_url("home")?>">Home</a>					
+								<li><a href="<?php echo base_url("Home")?>">Home</a>					
 							</li>															
-							<li><a href="<?php echo base_url("profile")?>">Profil</a>
+							<li><a href="<?php echo base_url("Profile")?>">Profil</a>
 							</li>
-							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
+							<li><a href="<?php echo base_url("Kelola_barang")?>">Barang</a>
 							</li>
 						</ul>
 					</nav>
@@ -100,7 +100,7 @@
 									<span class="pull-center"><span class="text"><span class="line">POST <strong>BARANG</strong></span></span></span>
 								</h4>
 
-				<form method="POST" action="<?php echo base_url()."index.php/post/createBarang"; ?> " enctype="multipart/form-data">	
+				<form method="POST" action="<?php echo base_url()."index.php/Post/createBarang"; ?> " enctype="multipart/form-data">	
 
           		<div class="form-group">
             		<label for="nama_barang"><strong>Nama Barang</strong></label>

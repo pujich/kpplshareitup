@@ -6,10 +6,10 @@ class Home_Admin extends CI_Controller{
 	function __construct(){	
 		parent::__construct();		
 		if(!$this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_ADMIN JIKA TIDAK LOGIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('login');
+			redirect('Login');
 		}
 		if($this->session->userdata('isAdmin')==FALSE) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_USER JIKA MEMBUKA HALAMAN HOME_ADMIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('home');
+			redirect('Home');
 		}
 		
 		$this->load->model('Model_futsal');
@@ -30,7 +30,7 @@ class Home_Admin extends CI_Controller{
 
 	public function deleteUser($ID){ //delete 1 komentar
     	$res = $this->Model_futsal->delete_item_user($ID);
-    	redirect('home_admin');
+    	redirect('Home_admin');
 	}
 
 

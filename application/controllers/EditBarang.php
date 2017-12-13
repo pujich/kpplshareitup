@@ -6,7 +6,7 @@ class EditBarang extends CI_Controller{
 	function __construct(){	
 		parent::__construct();		
 		if(!$this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_ADMIN JIKA TIDAK LOGIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('login');
+			redirect('Login');
 		}
 		
 		$this->load->model('Model_kelolaBarang');
@@ -29,7 +29,7 @@ class EditBarang extends CI_Controller{
 
 	public function deleteBarang($ID){ //delete 1 komentar
     	$res = $this->Model_kelolaBarang->delete_item_barang($ID);
-    	redirect('admin_barang');
+    	redirect('Admin_barang');
 	}
 
 	
@@ -68,7 +68,7 @@ class EditBarang extends CI_Controller{
 				);
 
            	$this->Model_kelolaBarang->UpdateData('barang',$data_update,'id_barang ='.$id);
-			redirect('kelola_barang'); }
+			redirect('Kelola_barang'); }
 
         else {
 
@@ -82,7 +82,7 @@ class EditBarang extends CI_Controller{
 				);
 
             $this->Model_kelolaBarang->UpdateData('barang',$data_updates,'id_barang ='.$id);
-			redirect('kelola_barang');
+			redirect('Kelola_barang');
 		}
 		
 	}

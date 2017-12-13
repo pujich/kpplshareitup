@@ -30,7 +30,7 @@
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" action="<?php echo base_url().'home/cari'?>">
+					<form method="POST" action="<?php echo base_url().'Home/cari'?>">
 						<input type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
 					</form>
 				</div>
@@ -50,14 +50,14 @@
 					<a href=<?php echo base_url().""?> class="logo pull-left"><img src="<?php echo base_url('assets/img/logo.png'); ?>" class="site_logo" alt="" style="margin-left:-10px; width:11%;height:11%;"></a>
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="<?php echo base_url("home")?>">Home</a>					
+							<li><a href="<?php echo base_url("Home")?>">Home</a>					
 								<!-- <ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
 									<li><a href="./products.html">Varius purus</a></li>									
 								</ul> -->
 							</li>															
-							<li><a href="<?php echo base_url("profile")?>">Profil</a>
+							<li><a href="<?php echo base_url("Profile")?>">Profil</a>
 								<!-- <ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
 									<li><a href="./products.html">Eget molestie</a></li>
@@ -132,7 +132,7 @@
              <?php 
                 echo '<td class="crud-actions">  
                   <a href="'.base_url()."EditBarang/Edit/".$row['id_barang'].'" class="btn btn-warning btn-sm">Edit</a>  
-                  <a href="'.base_url()."index.php/post/deleteBarang/".$row['id_barang'].'" class="btn btn-danger btn-sm">Delete</a>
+                  <a href="'.base_url()."index.php/Post/deleteBarang/".$row['id_barang'].'" class="btn btn-danger btn-sm">Delete</a>
                 </td>';
                 echo '</tr>';
              ?>   -->

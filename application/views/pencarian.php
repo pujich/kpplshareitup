@@ -75,11 +75,11 @@
 
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="<?php echo base_url("home")?>">Home</a>					
+							<li><a href="<?php echo base_url("Home")?>">Home</a>					
 							</li>															
-							<li><a href="<?php echo base_url("profile")?>">Profil</a>
+							<li><a href="<?php echo base_url("Profile")?>">Profil</a>
 							</li>
-							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
+							<li><a href="<?php echo base_url("Kelola_barang")?>">Barang</a>
 							</li>							
 						</ul>
 					</nav>
@@ -87,16 +87,16 @@
 			</section>
 			<section class="main-content">
 			<div class="span2" style="margin-top:20px; float:right">
-			<form method="GET" action="<?php echo base_url().'home/urut'?>">
+			<form method="GET" action="<?php echo base_url().'Home/urut'?>">
 				<div class="dropdown">
 				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sort By Location
 					<span class="caret"></span>
 				</button>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header">Kelurahan</li>
-						<li name="urutan"><a href="<?php echo base_url().'home/urut/sukolilo'?>">Sukolilo</a></li>
-						<li name="urutan"><a href="<?php echo base_url().'home/urut/Mulyorejo'?>">Mulyorejo</a></li>
-						<li name="urutan"><a href="<?php echo base_url().'home/urut/sukolilo'?>">Abadi</a></li>
+						<li name="urutan"><a href="<?php echo base_url().'Home/urut/sukolilo'?>">Sukolilo</a></li>
+						<li name="urutan"><a href="<?php echo base_url().'Home/urut/Mulyorejo'?>">Mulyorejo</a></li>
+						<li name="urutan"><a href="<?php echo base_url().'Home/urut/sukolilo'?>">Abadi</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Kecamatan</li>
 						<li name="urutan"><a href="#">Bagong</a></li>
@@ -106,7 +106,7 @@
 			
 			</form>
 			<div class="span4" style="margin-top:20px; float:right">
-			<form method="POST" action="<?php echo base_url().'home/cari'?>">
+			<form method="POST" action="<?php echo base_url().'Home/cari'?>">
 						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
 			</form>
 			</div>

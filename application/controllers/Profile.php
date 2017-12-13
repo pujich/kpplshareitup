@@ -51,7 +51,7 @@ public function edit_profil(){
         
            	$this->Model_futsal->UpdateData('user',$data_update,'id_user ='.$id);
 
-           	redirect('profile'); }
+           	redirect('Profile'); }
 
         else {
 
@@ -67,7 +67,7 @@ public function edit_profil(){
            	'foto_profil'=>$file1);
             
             $this->Model_futsal->UpdateData('user',$data_updates,'id_user ='.$id);
-			redirect('profile'); }}
+			redirect('Profile'); }}
 	
 
     public function profil_user(){

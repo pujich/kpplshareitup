@@ -23,36 +23,36 @@ public function index(){
 
 			if ($now==$converted) {  
   
-  // $sender_email = 'pujiji@shareitup.xyz';
-  // $user_password = 'pujiji';
+  $sender_email = 'pujiji@shareitup.xyz';
+  $user_password = 'pujiji';
   
-  // // $username = $row['nama_user'];
+  // $username = $row['nama_user'];
 
-  // // Configure email library
-  // $config['protocol'] = 'http';
-  // $config['smtp_host'] = 'mx1.hostinger.in';
-  // $config['smtp_timeout'] = '7';
-  // $config['smtp_port'] = 587;
-  // $config['charset']    = 'utf-8';
-  //       $config['newline']    = "\r\n";
-  //       $config['mailtype'] = 'text'; // or html
-  //       //$config['validation'] = TRUE; // bool whether to validate email or not
-  // $config['smtp_user'] = $sender_email;
-  // $config['smtp_pass'] = $user_password;
+  // Configure email library
+  $config['protocol'] = 'http';
+  $config['smtp_host'] = 'mx1.hostinger.in';
+  $config['smtp_timeout'] = '7';
+  $config['smtp_port'] = 587;
+  $config['charset']    = 'utf-8';
+        $config['newline']    = "\r\n";
+        $config['mailtype'] = 'text'; // or html
+        //$config['validation'] = TRUE; // bool whether to validate email or not
+  $config['smtp_user'] = $sender_email;
+  $config['smtp_pass'] = $user_password;
             
-  // $this->load->library('email', $config);
-  // $this->email->set_newline("\r\n");
+  $this->load->library('email', $config);
+  $this->email->set_newline("\r\n");
 
-  // // Sender email address
-  // $this->email->from($sender_email, $username);
-  // // Receiver email address
-  // $this->email->to($row['email']);
-  // // Subject of email
-  // $this->email->subject('Segera kembalikan barang anda!');
-  // // Message in email
-  // $this->email->message('Dear, '.$row['nama_user'].'. barang yang anda pinjam, '.$row['nama_barang'].' akan menyentuh batas peminjaman dalam 3 hari. Segera melakukan pengembalian barang');
+  // Sender email address
+  $this->email->from($sender_email, $username);
+  // Receiver email address
+  $this->email->to($row['email']);
+  // Subject of email
+  $this->email->subject('Segera kembalikan barang anda!');
+  // Message in email
+  $this->email->message('Dear, '.$row['nama_user'].'. barang yang anda pinjam, '.$row['nama_barang'].' akan menyentuh batas peminjaman dalam 3 hari. Segera melakukan pengembalian barang');
         
-  // $this->email->send();
+  $this->email->send();
    }
 
 			else {}

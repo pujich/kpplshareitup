@@ -6,7 +6,7 @@ class Login extends CI_Controller{
 	public function __construct() {
 		parent::__construct();		
 		if($this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME JIKA MEMBUKA HALAMAN LAIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('home');
+			redirect('Home');
 		}
 		
 		$this->load->helper('url');
@@ -22,7 +22,7 @@ class Login extends CI_Controller{
   		$this->load->view('Home');
 	}
  
-		$this->load->view('login');	
+		$this->load->view('Login');	
 	}
 
 	public function aksi_login(){
@@ -48,7 +48,7 @@ class Login extends CI_Controller{
 	    	//$this->load->view('Home');
         }	else{
                 	$message = "Username / Password salah";
-					echo "<script type='text/javascript'>alert('$message');window.location.href='".site_url('login')."';</script>";
+					echo "<script type='text/javascript'>alert('$message');window.location.href='".site_url('Login')."';</script>";
 	  		//$this->load->view('Home');
 		}
 	}

@@ -181,10 +181,10 @@
                     <td><?php if ($x['dikembalikan']==0) {echo 'Tidak';} else {echo 'Ya';} ?></td>
                     <td><?php echo $x['id_pemilik']; ?></td>
                     <td align="center">
-                      <a href="<?php echo base_url()."admin_barang/edit/".$x['id_barang']; ?>"><button class="btn btn-primary" style="border: solid 0px; margin-top: 10px; margin-bottom: 10px;">Edit</button></a>
+                      <a href="<?php echo base_url()."Admin_barang/edit/".$x['id_barang']; ?>"><button class="btn btn-primary" style="border: solid 0px; margin-top: 10px; margin-bottom: 10px;">Edit</button></a>
                     </td>
                     <td align="center">
-                      <a href="<?php echo base_url()."admin_barang/deleteBarang/".$x['id_barang']; ?>"><button class="btn btn-primary" style="border: solid 0px; margin-top: 11px; margin-bottom: 10px;">Delete</button></a>
+                      <a href="<?php echo base_url()."Admin_barang/deleteBarang/".$x['id_barang']; ?>"><button class="btn btn-primary" style="border: solid 0px; margin-top: 11px; margin-bottom: 10px;">Delete</button></a>
                     </td>
 
                     </tr>

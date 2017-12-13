@@ -6,10 +6,10 @@ class View_Edit extends CI_Controller{
 	function __construct(){	
 		parent::__construct();		
 		if(!$this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_ADMIN JIKA TIDAK LOGIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('login');
+			redirect('Login');
 		}
 		if($this->session->userdata('isAdmin')==FALSE) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_USER JIKA MEMBUKA HALAMAN HOME_ADMIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('home');
+			redirect('Home');
 		}
 		
 		$this->load->model('Model_kelolaBarang');
@@ -32,14 +32,14 @@ class View_Edit extends CI_Controller{
 
 	public function deleteBarang($ID){ //delete 1 komentar
     	$res = $this->Model_kelolaBarang->delete_item_barang($ID);
-    	redirect('admin_barang');
+    	redirect('Admin_barang');
 	}
 
 	
 	public function edit($ID){
 		$where = array('id_barang' => $ID);
 		$data['barang'] = $this->Model_kelolaBarang->edit_data($where,'barang')->result();
-		$this->load->view('view_edit', $data);
+		$this->load->view('View_edit', $data);
 	}
 	
 	function update(){

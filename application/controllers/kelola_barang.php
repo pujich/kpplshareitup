@@ -5,7 +5,7 @@ class Kelola_barang extends CI_Controller{
 function __construct(){	
 		parent::__construct();		
 		if(!$this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_USER JIKA TIDAK LOGIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('login');
+			redirect('Login');
 		}
 		
 		$this->load->model('Model_kelolaBarang');

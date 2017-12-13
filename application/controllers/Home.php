@@ -6,10 +6,10 @@ class Home extends CI_Controller{
 	function __construct(){	
 		parent::__construct();		
 		if(!$this->session->userdata('id_user')) { // >>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_USER JIKA TIDAK LOGIN <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('login');
+			redirect('Login');
 		}
 		if($this->session->userdata('isAdmin')==TRUE) { // >>>>>>>>>>>>>>>>>>>MEMBATASI HALAMAN HOME_ADMIN JIKA MEMBUKA HALAMAN HOME_USER <<<<<<<<<<<<<<<<<<<<<<<<<<
-			redirect('home_admin');
+			redirect('Home_admin');
 		}
 		
 		$this->load->model('Model_kelolaBarang');
@@ -33,14 +33,14 @@ class Home extends CI_Controller{
 		$where = array('nama_barang' => $this->input->post('pencari'), 'jenis' => $this->input->post('pencari'));
 		$hasil = $this->Model_kelolaBarang->pencarian($where, 'barang');
 		$data = array('data'=>$hasil);
-		$this->load->view('pencarian', $data);	
+		$this->load->view('Pencarian', $data);	
 	}
 	
 	public function urut($parameter){
 		$where = array('kecamatan' => $parameter);
 		$hasil = $this->Model_kelolaBarang->urutan($where, 'user');
 		$data = array('data'=>$hasil);
-		$this->load->view('pencarian', $data);	
+		$this->load->view('Pencarian', $data);	
 	}
 	
 } ?>

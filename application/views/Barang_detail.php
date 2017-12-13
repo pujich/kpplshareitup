@@ -33,7 +33,7 @@
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4">
-					<form method="POST" action="<?php echo base_url().'home/cari'?>">
+					<form method="POST" action="<?php echo base_url().'Home/cari'?>">
 
 						<input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">
 					</form>
@@ -56,11 +56,11 @@
 					<img src="<?php echo base_url('assets/img/logo.png'); ?> " style="width: 11%; height: 100%; margin-left:-10px;"/>
 					<nav id="menu" class="pull-right">
 						<ul>
-								<li><a href="<?php echo base_url("home")?>">Home</a>					
+								<li><a href="<?php echo base_url("Home")?>">Home</a>					
 							</li>															
-							<li><a href="<?php echo base_url("profile")?>">Profil</a>
+							<li><a href="<?php echo base_url("Profile")?>">Profil</a>
 							</li>
-							<li><a href="<?php echo base_url("kelola_barang")?>">Barang</a>
+							<li><a href="<?php echo base_url("Kelola_barang")?>">Barang</a>
 							</li>
 						</ul>
 					</nav>
