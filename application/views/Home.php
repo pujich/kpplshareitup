@@ -59,9 +59,7 @@
 				<div class="span8">
 					<div class="account pull-right">
 						<ul class="user-menu">
-							<li><b>Hi, <?php echo $this->session->userdata('nama_user'); ?></b>		</li>	
-							
-								
+							<li><b>Hi, <?php echo $this->session->userdata('nama_user'); ?></b>		</li>
 							<li><a style="padding: 3px 5px;" class="btn btn-inverse large" href="<?php echo site_url('Logout'); ?>">Logout</a></li>		
 						</ul>
 					</div>
@@ -333,8 +331,8 @@
 					<div class="span3">
 						<h4>Navigation</h4>
 						<ul class="nav">
-							<li><a href="">Login</a></li>  
-							<li><a href="">Register</a></li>
+							<li><a href="home">Login</a></li>  
+							<li><a href="home">Register</a></li>
 							<li><a href="home">Home</a></li>
 							<li><a href="kelola_barang">Barang</a></li>							
 						</ul>					
