@@ -300,27 +300,27 @@
 							<div class="span4">
 								<div class="service">
 									<div class="responsive">	
-										<img src="" alt="" />
+										<img src="assets/themes/images/feature_img_2.png" alt="" />
 										<h4>MODERN <strong>DESIGN</strong></h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>									
+										<p>Share It Up is simply dummy text of the printing and printing industry unknown printer.</p>									
 									</div>
 								</div>
 							</div>
 							<div class="span4">	
 								<div class="service">
 									<div class="customize">			
-										<img src="themes/images/feature_img_1.png" alt="" />
+										<img src="assets/themes/images/feature_img_1.png" alt="" />
 										<h4>FREE <strong>SHIPPING</strong></h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+										<p>Share It Up is simply dummy text of the printing and printing industry unknown printer.</p>
 									</div>
 								</div>
 							</div>
 							<div class="span4">
 								<div class="service">
 									<div class="support">	
-										<img src="themes/images/feature_img_3.png" alt="" />
+										<img src="assets/themes/images/feature_img_3.png" alt="" />
 										<h4>24/7 LIVE <strong>SUPPORT</strong></h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+										<p>Share It Up is simply dummy text of the printing and printing industry unknown printer.</p>
 									</div>
 								</div>
 							</div>	
@@ -328,60 +328,27 @@
 					</div>				
 				</div>
 			</section>
-			<section class="our_client">
-				<h4 class="title"><span class="text">Manufactures</span></h4>
-				<div class="row">					
-					<div class="span2">
-						<a href="#"><img alt="" src="themes/images/clients/14.png"></a>
-					</div>
-					<div class="span2">
-						<a href="#"><img alt="" src="themes/images/clients/35.png"></a>
-					</div>
-					<div class="span2">
-						<a href="#"><img alt="" src="themes/images/clients/1.png"></a>
-					</div>
-					<div class="span2">
-						<a href="#"><img alt="" src="themes/images/clients/2.png"></a>
-					</div>
-					<div class="span2">
-						<a href="#"><img alt="" src="themes/images/clients/3.png"></a>
-					</div>
-					<div class="span2">
-						<a href="#"><img alt="" src="themes/images/clients/4.png"></a>
-					</div>
-				</div>
-			</section>
 			<section id="footer-bar">
 				<div class="row">
 					<div class="span3">
 						<h4>Navigation</h4>
 						<ul class="nav">
-							<li><a href="./index.html">Homepage</a></li>  
-							<li><a href="./about.html">About Us</a></li>
-							<li><a href="./contact.html">Contac Us</a></li>
-							<li><a href="./cart.html">Your Cart</a></li>
-							<li><a href="./register.html">Login</a></li>							
+							<li><a href="">Login</a></li>  
+							<li><a href="">Register</a></li>
+							<li><a href="home">Home</a></li>
+							<li><a href="kelola_barang">Barang</a></li>							
 						</ul>					
 					</div>
 					<div class="span4">
 						<h4>My Account</h4>
 						<ul class="nav">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Order History</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Newsletter</a></li>
+							<li><a href="profile">My Profile</a></li>
 						</ul>
 					</div>
 					<div class="span5">
-						<p class="logo"><img src="themes/images/logo.png" class="site_logo" alt=""></p>
+						<p class="logo"><img src="assets/img/logo2.png" style="margin-left:-11px;" class="site_logo" alt=""></p>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
-						<br/>
-						<span class="social_icons">
-							<a class="facebook" href="#">Facebook</a>
-							<a class="twitter" href="#">Twitter</a>
-							<a class="skype" href="#">Skype</a>
-							<a class="vimeo" href="#">Vimeo</a>
-						</span>
+						
 					</div>					
 				</div>	
 			</section>
