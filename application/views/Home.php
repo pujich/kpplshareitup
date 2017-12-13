@@ -293,14 +293,13 @@
 								</div> -->
 							</div>						
 						</div>
-						<div class="row feature_box">	
-											
+						<div class="row feature_box">				
 							<div class="span4">
 								<div class="service">
 									<div class="responsive">	
 										<img src="assets/themes/images/feature_img_2.png" alt="" />
 										<h4>MODERN <strong>DESIGN</strong></h4>
-										<p>Share It Up is simply dummy text of the printing and printing industry unknown printer.</p>									
+										<p>Share It Up ini menggunakan design modern.</p>									
 									</div>
 								</div>
 							</div>
@@ -309,7 +308,7 @@
 									<div class="customize">			
 										<img src="assets/themes/images/feature_img_1.png" alt="" />
 										<h4>FREE <strong>SHIPPING</strong></h4>
-										<p>Share It Up is simply dummy text of the printing and printing industry unknown printer.</p>
+										<p>Share It Up ini mudah digunakan. Hanya pilih Barang yang ingin kamu pinjam dan klik pinjam!</p>
 									</div>
 								</div>
 							</div>
@@ -318,7 +317,7 @@
 									<div class="support">	
 										<img src="assets/themes/images/feature_img_3.png" alt="" />
 										<h4>24/7 LIVE <strong>SUPPORT</strong></h4>
-										<p>Share It Up is simply dummy text of the printing and printing industry unknown printer.</p>
+										<p>Share It Up ini live support selama 24jam.</p>
 									</div>
 								</div>
 							</div>	
@@ -345,7 +344,7 @@
 					</div>
 					<div class="span5">
 						<p class="logo"><img src="assets/img/logo2.png" style="margin-left:-11px;" class="site_logo" alt=""></p>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+						<p>Share It Up ini menggunakan design modern.<br> Share It Up ini mudah digunakan. Hanya pilih Barang yang ingin kamu pinjam dan klik pinjam!<br> Share It Up ini live support selama 24jam.</p>
 						
 					</div>					
 				</div>	
