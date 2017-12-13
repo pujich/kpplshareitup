@@ -17,6 +17,16 @@ class Model_kelolaProfil extends CI_Model {
       $this->db->insert($tableName,$data);
     }
 
+    public function notif(){
+
+    	$data=$this->db->query('select * from barang 
+  			join transaksi_barang on barang.id_barang=transaksi_barang.id_barangP
+  			join user on transaksi_barang.id_peminjam=user.id_user' );
+
+    	return $data->result_array();
+
+    }
+
 	
 
 }
