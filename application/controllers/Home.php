@@ -33,14 +33,38 @@ class Home extends CI_Controller{
 		$where = array('nama_barang' => $this->input->post('pencari'), 'jenis' => $this->input->post('pencari'));
 		$hasil = $this->Model_kelolaBarang->pencarian($where, 'barang');
 		$data = array('data'=>$hasil);
+		$data1 = array('keyword'=>$this->input->post('pencari'));
+		$this->session->set_userdata('keyword', $data1);
+	
 		$this->load->view('Pencarian', $data);	
 	}
 	
 	public function urut($parameter){
-		$where = array('kecamatan' => $parameter);
-		$hasil = $this->Model_kelolaBarang->urutan($where, 'user');
-		$data = array('data'=>$hasil);
+
+			$where1 = array('kecamatan' => $parameter);
+			$where = array('nama_barang' => $this->session->userdata('keyword')['keyword'], 'jenis' => $this->session->userdata('keyword')['keyword']);
+			$hasil = $this->Model_kelolaBarang->urutan_cari($where,$where1, 'user');
+			$data = array('data'=>$hasil);
+
 		$this->load->view('Pencarian', $data);	
+	}
+	
+	public function test()
+	{
+		
+		$filter = $this->input->post('filter');
+        $field  = $this->input->post('field');
+        $search = $this->input->post('search');
+
+        if (isset($filter) && !empty($search)) {
+            $this->load->model('model_kelolaBarang');
+            $data['barang'] = $this->model_kelolaBarang->test($field, $search);
+        } else {
+            $this->load->model('model_kelolaBarang');
+            $data['barang'] = $this->model_kelolaBarang->test();
+        }
+
+        $this->load->view('pencarian');
 	}
 	
 } ?>
