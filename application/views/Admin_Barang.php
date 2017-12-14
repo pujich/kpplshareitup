@@ -152,6 +152,27 @@
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-database"></i> Data Barang</div>
+          <?php
+          $attributes = array('class'=>'searchform', 'id'=>'searchform');
+          echo form_open('Admin_Barang/searchCrud');?>
+          <div class="formelements">
+            <div class="formlbl">
+                Search:
+            </div>
+            <div class="forminput">
+                <input type="text" name="searchon" id ="searchon"/>
+            </div>
+            <div class="searchtyp">
+                <select class="searchby" name="searchby">
+                    <option value="0">---Select--- </option>
+                    <option value="pemilik">Pemilik</option>
+                </select>
+            </div>
+            <div class="searchinput">
+                <input type="submit" name="search" value="Search" />
+            </div>
+        </div>          
+        <?php echo form_close();?>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

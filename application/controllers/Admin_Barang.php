@@ -112,4 +112,22 @@ class Admin_Barang extends CI_Controller{
 		}
 	}
 
+	// public function cari(){
+	// 	$where = array('id_pemilik' => $this->input->post('id_pemilik'));
+	// 	$hasil = $this->Model_kelolaBarang->pencarian($where, 'barang');
+	// 	$data = array('data'=>$hasil);
+	// 	$this->load->view('Admin_Barang', $data);	
+	// }
+
+	public function searchCrud() {
+		$searchby = $this->input->post('searchby');
+    	$searchon = $this->input->post('searchon');
+
+    	$records =  $this->Model_kelolaBarang->searchCrud($searchby, $searchon);
+    	
+    	foreach ($records as $record)  {
+        	echo $record->id_pemilik; 
+    	}
+	}
+
 } ?>

@@ -135,6 +135,7 @@ class Model_kelolaBarang extends CI_Model {
 		// $this->db->insert('transaksi_barang', $item );
 		$this->db->query('UPDATE barang SET dipinjam = 0 WHERE barang.id_barang = '.$item);
 		$this->db->query('UPDATE barang SET dikembalikan = 1 WHERE barang.id_barang = '.$item);
+
 	}
 	
 	function test($field , $search){
@@ -142,6 +143,17 @@ class Model_kelolaBarang extends CI_Model {
 			return $query->result();
 		}
 
+  public function searchCrud($searchby, $searchon) {
+    $this->db->like($searchon, $searchby);
+    $query = $this->db->get('barang');
+
+    if($query->num_rows() > 0) {
+         return $query->result();
+    }
+    else {
+         return FALSE;
+    }
+  }
 
 
 }
