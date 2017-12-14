@@ -89,6 +89,7 @@ class Model_kelolaBarang extends CI_Model {
 	function pencarian($where, $table ){
 		$query = $this->db->select('*')
 			->from($table)
+			->join('user','id_pemilik = id_user')
 			->or_like($where)
 			->get();
 		return ($query->num_rows() <= 0)? false : $query->result_array();
@@ -97,8 +98,18 @@ class Model_kelolaBarang extends CI_Model {
 	function urutan($where, $table ){
 		$query = $this->db->select('*')
 			->from($table)
-			->join('barang','id_pemilik = id_user')
+			->join('user','id_pemilik = id_user')
 			->where($where)
+			->get();
+		return ($query->num_rows() <= 0)? false : $query->result_array();
+	}
+	
+	function urutan_cari($where,$where1, $table ){
+		$query = $this->db->select('*')
+			->from($table)
+			->join('barang','id_pemilik = id_user')
+			->or_like($where)
+			->where($where1)
 			->get();
 		return ($query->num_rows() <= 0)? false : $query->result_array();
 	}
@@ -124,10 +135,12 @@ class Model_kelolaBarang extends CI_Model {
 		// $this->db->insert('transaksi_barang', $item );
 		$this->db->query('UPDATE barang SET dipinjam = 0 WHERE barang.id_barang = '.$item);
 		$this->db->query('UPDATE barang SET dikembalikan = 1 WHERE barang.id_barang = '.$item);
-		
-
-
 	}
+	
+	function test($field , $search){
+			$query = $this->db->like($field, $search)->order_By('kelurahan')->get('barang');
+			return $query->result();
+		}
 
 
 

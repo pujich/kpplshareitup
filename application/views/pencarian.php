@@ -86,45 +86,32 @@
 				</div>
 			</section>
 			<section class="main-content">
-			<div class="span2" style="margin-top:20px; float:right">
-			<form method="GET" action="<?php echo base_url().'Home/urut'?>">
-				<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sort By Location
-					<span class="caret"></span>
-				</button>
-					<ul class="dropdown-menu">
-						<li class="dropdown-header">Kelurahan</li>
-						<li name="urutan"><a href="<?php echo base_url().'Home/urut/sukolilo'?>">Sukolilo</a></li>
-						<li name="urutan"><a href="<?php echo base_url().'Home/urut/Mulyorejo'?>">Mulyorejo</a></li>
-						<li name="urutan"><a href="<?php echo base_url().'Home/urut/sukolilo'?>">Abadi</a></li>
-						<li class="divider"></li>
-						<li class="dropdown-header">Kecamatan</li>
-						<li name="urutan"><a href="#">Bagong</a></li>
-					</ul>
-				</div>
-			</div>
 			
-			</form>
-			<div class="span4" style="margin-top:20px; float:right">
-			<form method="POST" action="<?php echo base_url().'Home/cari'?>">
-						<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
-			</form>
-			</div>
-			<!-- <div class="span4" style="margin-top:20px; float:right">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
-					<span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li class="dropdown-header">Dropdown header 1</li>
-						<li><a href="#">HTML</a></li>
-						<li><a href="#">CSS</a></li>
-						<li><a href="#">JavaScript</a></li>
-						<li class="divider"></li>
-						<li class="dropdown-header">Dropdown header 2</li>
-						<li><a href="#">About Us</a></li>
-					</ul>
+			<div class="span2" style="margin-top:20px; float:right">
+					  <form method="POST" action="<?php echo base_url().'Home/urut'?>">
+					  <div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Sort By Location
+						<span class="caret"></span>
+					</button>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Kelurahan</li>
+							<li name="urutan"><a href="<?php echo base_url().'Home/urut/sukolilo'?>">Sukolilo</a></li>
+							<li name="urutan"><a href="<?php echo base_url().'Home/urut/Mulyorejo'?>">Mulyorejo</a></li>
+							<li name="urutan"><a href="<?php echo base_url().'Home/urut/sukolilo'?>">Abadi</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Kecamatan</li>
+							<li name="urutan"><a href="#">Bagong</a></li>
+						</ul>
+					</div>
+					</form>
 				</div>
-			</div>-->
+				
+				<form method="POST" action="<?php echo base_url().'Home/cari'?>">
+			<div class="span4" style="margin-top:20px; float:right">
+				<input name="pencari" type="text" class="input-block-level search-query" Placeholder="eg. Nama / Jenis Barang">
+				</div>
+					
+			</form>
 				<div class="row">
 					<div class="span12">													
 						<div class="row">

@@ -106,6 +106,7 @@
 									<input tabindex="3" class="btn btn-inverse large" style="margin-left:27px;" type="submit" value="Sign into your account">
 									<hr>
 								</div>
+								
 							</fieldset>
 						</form>				
 					</div>
