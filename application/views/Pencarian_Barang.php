@@ -21,7 +21,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="../admin_barang">Admin</a>
+    <a class="navbar-brand" href="">Admin</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -144,7 +144,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="../Admin_Barang">Dashboard</a>
+          <a href="">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Barang</li>
       </ol>
@@ -163,7 +163,7 @@
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
+              	<thead>
                     <th style="text-align: center;">ID Barang</th>
                     <th style="text-align: center;">Nama Barang</th>  
                     <th style="text-align: center;">Jenis Barang</th>
@@ -204,7 +204,7 @@
         </div>
         <!-- SETING CURDATE DAN CURTIME -->
         <?php 
-          $now = new DateTime();
+        	$now = new DateTime();
           $now->setTimezone(new DateTimezone('Asia/Jakarta'));
         ?>
         <div class="card-footer small text-muted">Updated <?php echo date("d-M-Y");?> at <?php echo $now->format('H:i:s');?></div>

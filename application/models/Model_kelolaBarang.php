@@ -143,17 +143,6 @@ class Model_kelolaBarang extends CI_Model {
 			return $query->result();
 		}
 
-  public function searchCrud($searchby, $searchon) {
-    $this->db->like($searchon, $searchby);
-    $query = $this->db->get('barang');
-
-    if($query->num_rows() > 0) {
-         return $query->result();
-    }
-    else {
-         return FALSE;
-    }
-  }
 
 
 }
