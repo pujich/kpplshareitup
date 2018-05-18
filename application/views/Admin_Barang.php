@@ -9,19 +9,19 @@
   <meta name="author" content="">
   <title>Dashboard Admin</title>
   <!-- Bootstrap core CSS-->
-  <link href="assets/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href=<?php echo base_url()."assets/admin/vendor/bootstrap/css/bootstrap.min.css"; ?> rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="assets/admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href=<?php echo base_url()."assets/admin/vendor/font-awesome/css/font-awesome.min.css"; ?> rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="assets/admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href=<?php echo base_url()."assets/admin/vendor/datatables/dataTables.bootstrap4.css"; ?> rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="assets/admin/css/sb-admin.css" rel="stylesheet">
+  <link href=<?php echo base_url()."assets/admin/css/sb-admin.css"; ?> rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="">Admin</a>
+    <a class="navbar-brand" href="../admin_barang">Admin</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -144,7 +144,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="">Dashboard</a>
+          <a href="../Admin_Barang">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Barang</li>
       </ol>
@@ -152,10 +152,18 @@
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-database"></i> Data Barang</div>
+          <form class="form-inline" action="<?php echo base_url() . 'Admin_Barang/cari'; ?>" method="post">
+            <select class="form-control" name="field">
+              <option selected="selected" disabled="disabled" value="">Filter By</option>
+              <option value="idpemilik">ID Pemilik</option>
+            </select>
+            <input class="form-control" type="text" name="pencari" value="" placeholder="Search...">
+            <input class="btn btn-default" type="submit" name="filter" value="Go">
+          </form>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              	<thead>
+                <thead>
                     <th style="text-align: center;">ID Barang</th>
                     <th style="text-align: center;">Nama Barang</th>  
                     <th style="text-align: center;">Jenis Barang</th>
@@ -196,7 +204,7 @@
         </div>
         <!-- SETING CURDATE DAN CURTIME -->
         <?php 
-        	$now = new DateTime();
+          $now = new DateTime();
           $now->setTimezone(new DateTimezone('Asia/Jakarta'));
         ?>
         <div class="card-footer small text-muted">Updated <?php echo date("d-M-Y");?> at <?php echo $now->format('H:i:s');?></div>
@@ -234,8 +242,8 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="assets/admin/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src=<?php echo base_url()."assets/admin/vendor/jquery/jquery.min.js";?> ></script>
+    <script src=<?php echo base_url()."assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js";?>></script>
     <!-- Core plugin JavaScript-->
     <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
     <!-- Page level plugin JavaScript-->
@@ -243,10 +251,10 @@
     <!-- <script src="vendor/datatables/jquery.dataTables.js"></script> -->
     <!-- <script src="vendor/datatables/dataTables.bootstrap4.js"></script> -->
     <!-- Custom scripts for all pages-->
-    <script src="assets/admin/js/sb-admin.min.js"></script>
+    <script src=<?php echo base_url()."assets/admin/js/sb-admin.min.js";?>></script>
     <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
+    <script src=<?php echo base_url()."assets/admin/js/sb-admin-datatables.min.js";?>></script>
+    <script src=<?php echo base_url()."assets/admin/js/sb-admin-charts.min.js";?>></script>
   </div>
 </body>
 
